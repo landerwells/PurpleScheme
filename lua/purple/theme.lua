@@ -25,8 +25,8 @@ function M.setup()
   local c = theme.colors
 
   theme.highlights = {
-    Comment = { fg = c.base01, style = options.styles.comments }, -- any comment
-    ColorColumn = { bg = c.base02 }, -- used for the columns set with 'colorcolumn'
+    Comment = { fg = "#51545c", style = options.styles.comments }, -- any comment
+    ColorColumn = { bg = c."#808080" }, -- used for the columns set with 'colorcolumn'
     Conceal = { fg = c.blue500 }, -- placeholder characters substituted for concealed text (see 'conceallevel')
     Cursor = { fg = c.base03, bg = c.base0 }, -- character under the cursor
     lCursor = { fg = c.base03, bg = c.base00 }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
@@ -49,8 +49,9 @@ function M.setup()
     SignColumn = { fg = c.base0 }, -- column where |signs| are displayed
     SignColumnSB = { fg = c.base0 }, -- column where |signs| are displayed
     Substitute = { fg = c.base04, bg = c.red500 }, -- |:substitute| replacement text highlighting
-    LineNr = { fg = c.yellow700, bg = options.transparent and c.none or c.bg }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-    CursorLineNr = { fg = c.orange500, sp = c.base1 }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+    LineNr = { fg = "#7e7e7e", bg = options.transparent and c.none or c.bg }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+    -- CursorLineNr = { fg = "#d1d1d1", sp = c.base1 }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+    CursorLineNr = { fg = "#d1d1d1" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     MatchParen = { fg = c.red100, bg = c.red500, bold = true }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg = { fg = c.blue500 }, -- 'showmode' message (e.g., "-- INSERT -- ")
     MsgArea = { fg = c.base01 }, -- Area for messages and cmdline
