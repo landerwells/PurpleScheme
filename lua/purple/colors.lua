@@ -12,7 +12,7 @@ M.default = {
   base03 = hsl(192, 100, 11),
   base02 = hsl(192, 81, 14),
   -- Comments
-  base01 = "#51545c"
+  base01 = "#51545c",
   base00 = hsl(196, 13, 45),
   -- base0 = hsl( 186, 8, 55 ),
   base0 = hsl(186, 8, 65),
