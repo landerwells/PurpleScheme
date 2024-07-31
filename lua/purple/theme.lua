@@ -400,13 +400,13 @@ function M.setup()
     TSRainbowCyan = { fg = c.cyan },
 
     -- rainbow-delimiters
-    RainbowDelimiterRed = { fg = c.red },
-    RainbowDelimiterOrange = { fg = c.orange },
-    RainbowDelimiterYellow = { fg = c.yellow },
-    RainbowDelimiterGreen = { fg = c.green },
-    RainbowDelimiterBlue = { fg = c.blue },
-    RainbowDelimiterViolet = { fg = c.violet },
-    RainbowDelimiterCyan = { fg = c.cyan },
+    RainbowDelimiterRed = { fg = "#ffd700" },
+    RainbowDelimiterOrange = { fg = "#da70d6" },
+    RainbowDelimiterYellow = { fg = "#179fff" },
+    RainbowDelimiterGreen = { fg = "#ffd700" },
+    RainbowDelimiterBlue = { fg = "#da70d6" },
+    RainbowDelimiterViolet = { fg = "#179fff" },
+    RainbowDelimiterCyan = { fg = "#ffd700" },
 
     -- LspTrouble
     TroubleText = { fg = c.base0 },
