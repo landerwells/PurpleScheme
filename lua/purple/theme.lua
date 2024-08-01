@@ -117,7 +117,7 @@ function M.setup()
     Keyword = { fg = c.green500, style = options.styles.keywords }, --  any other keyword
     -- Exception     = { }, --  try, catch, throw
 
-    PreProc = { fg = c.red500 }, -- (preferred) generic Preprocessor
+    PreProc = { fg = c.red100 }, -- (preferred) generic Preprocessor
     -- Include       = { }, --  preprocessor #include
     -- Define        = { }, --   preprocessor #define
     -- Macro         = { }, --    same as Define
