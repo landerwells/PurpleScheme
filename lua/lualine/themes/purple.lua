@@ -6,7 +6,7 @@ local purple_local = {}
 purple_local.normal = {
   a = { bg "#1d1d1d" =  fg = "#ffffff" },
   b = { bg = colors.base0, fg = colors.base04 },
-  c = { bg = colors.bg_statusline, fg = colors.fg },
+  c = { bg = "#1d1d1d", fg = colors.fg },
 }
 
 purple_local.insert = {
