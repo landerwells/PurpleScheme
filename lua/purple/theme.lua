@@ -267,7 +267,7 @@ function M.setup()
     ["@operator"] = { fg = c.green500 }, -- For any operator: `+`, but also `->` and `*` in C.
 
     --- Punctuation
-    ["@punctuation.delimiter"] = { fg = c.green500 }, -- For delimiters ie: `.`
+    ["@punctuation.delimiter"] = { fg = "#d1d1d1" }, -- For delimiters ie: `.`
     ["@punctuation.bracket"] = { fg = c.orange500 }, -- For brackets and parens.
     ["@punctuation.special"] = { fg = c.orange500 }, -- For special punctutation that does not fall in the catagories before.
     ["@punctuation.special.markdown"] = { fg = c.orange500, bold = true },
