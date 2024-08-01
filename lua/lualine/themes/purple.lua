@@ -4,8 +4,8 @@ local config = require("purple.config").options
 local purple_local = {}
 
 purple_local.normal = {
-  a = { bg = "#ffffff", fg = "#000000" },
-  b = { bg = "#171717", fg = "#ffffff" },
+  a = { bg = "#000000", fg = "#ffffff" },
+  b = { bg = "#ffffff", fg = "#171717" },
   c = { bg = "#1d1d1d", fg = colors.fg },
 }
 
