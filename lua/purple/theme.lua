@@ -109,21 +109,21 @@ function M.setup()
     Identifier = { fg = c.blue500, style = options.styles.variables }, -- (preferred) any variable name
     Function = { fg = c.blue500, style = options.styles.functions }, -- function name (also: methods for classes)
 
-    Statement = { fg = c.green500 }, -- (preferred) any statement
+    Statement = { fg = "#ff5eed" }, -- (preferred) any statement
     -- Conditional   = { }, --  if, then, else, endif, switch, etc.
     -- Repeat        = { }, --   for, do, while, etc.
     -- Label         = { }, --    case, default, etc.
     Operator = { fg = c.green500 }, -- "sizeof", "+", "*", etc.
-    Keyword = { fg = "#ff5eed", style = options.styles.keywords }, --  any other keyword
+    Keyword = { fg = c.green500, style = options.styles.keywords }, --  any other keyword
     -- Exception     = { }, --  try, catch, throw
 
-    PreProc = { fg = c.red100 }, -- (preferred) generic Preprocessor
+    PreProc = { fg = c.red500 }, -- (preferred) generic Preprocessor
     -- Include       = { }, --  preprocessor #include
     -- Define        = { }, --   preprocessor #define
     -- Macro         = { }, --    same as Define
     -- PreCondit     = { }, --  preprocessor #if, #else, #endif, etc.
 
-    Type = { fg = "#ff5eed" }, -- (preferred) int, long, char, etc.
+    Type = { fg = c.yellow500 }, -- (preferred) int, long, char, etc.
     -- StorageClass  = { }, -- static, register, volatile, etc.
     -- Structure     = { }, --  struct, union, enum, etc.
     -- Typedef       = { }, --  A typedef
@@ -143,7 +143,7 @@ function M.setup()
     -- Ignore = { }, -- (preferred) left blank, hidden  |hl-Ignore|
 
     Error = { fg = c.red500 }, -- (preferred) any erroneous construct
-    Todo = { fg = "#ff5eed", bold = true }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+    Todo = { fg = c.magenta500, bold = true }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
     qfLineNr = { fg = c.base0 },
     qfFileName = { fg = c.violet500 },
@@ -267,7 +267,7 @@ function M.setup()
     ["@operator"] = { fg = c.green500 }, -- For any operator: `+`, but also `->` and `*` in C.
 
     --- Punctuation
-    ["@punctuation.delimiter"] = { fg = "#d1d1d1" }, -- For delimiters ie: `.`
+    ["@punctuation.delimiter"] = { fg = c.green500 }, -- For delimiters ie: `.`
     ["@punctuation.bracket"] = { fg = c.orange500 }, -- For brackets and parens.
     ["@punctuation.special"] = { fg = c.orange500 }, -- For special punctutation that does not fall in the catagories before.
     ["@punctuation.special.markdown"] = { fg = c.orange500, bold = true },
