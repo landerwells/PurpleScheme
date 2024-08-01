@@ -114,7 +114,7 @@ function M.setup()
     -- Repeat        = { }, --   for, do, while, etc.
     -- Label         = { }, --    case, default, etc.
     Operator = { fg = c.green500 }, -- "sizeof", "+", "*", etc.
-    Keyword = { fg = c.green500, style = options.styles.keywords }, --  any other keyword
+    Keyword = { fg = "#ff5eed", style = options.styles.keywords }, --  any other keyword
     -- Exception     = { }, --  try, catch, throw
 
     PreProc = { fg = c.red100 }, -- (preferred) generic Preprocessor
@@ -143,7 +143,7 @@ function M.setup()
     -- Ignore = { }, -- (preferred) left blank, hidden  |hl-Ignore|
 
     Error = { fg = c.red500 }, -- (preferred) any erroneous construct
-    Todo = { fg = c.magenta500, bold = true }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+    Todo = { fg = "#ff5eed", bold = true }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
     qfLineNr = { fg = c.base0 },
     qfFileName = { fg = c.violet500 },
