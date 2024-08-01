@@ -28,7 +28,7 @@ function M.setup()
     Comment = { fg = "#51545c", style = options.styles.comments }, -- any comment
     ColorColumn = { bg = "#808080" }, -- used for the columns set with 'colorcolumn'
     Conceal = { fg = c.blue500 }, -- placeholder characters substituted for concealed text (see 'conceallevel')
-    Cursor = { fg = c.base03, bg = c.base0 }, -- character under the cursor
+    Cursor = { fg = "#d1d1d1", bg = "#1d1d1d" }, -- character under the cursor
     lCursor = { fg = c.base03, bg = c.base00 }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
     CursorIM = { fg = c.base03, bg = c.base0 }, -- like Cursor, but used when in IME mode |CursorIM|
     CursorColumn = { bg = c.base02 }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
@@ -467,9 +467,9 @@ function M.setup()
     GitGutterDeleteLineNr = { fg = c.red500 },
 
     -- GitSigns
-    GitSignsAdd = { fg = c.green500 }, -- diff mode: Added line |diff.txt|
-    GitSignsChange = { fg = c.yellow500 }, -- diff mode: Changed line |diff.txt|
-    GitSignsDelete = { fg = c.red500 }, -- diff mode: Deleted line |diff.txt|
+    GitSignsAdd = { fg = "#5aff5d" }, -- diff mode: Added line |diff.txt|
+    GitSignsChange = { fg = "#ffae44" }, -- diff mode: Changed line |diff.txt|
+    GitSignsDelete = { fg = "#ff4444" }, -- diff mode: Deleted line |diff.txt|
 
     -- Telescope
     TelescopeBorder = { fg = c.base02, bg = c.bg_float },
