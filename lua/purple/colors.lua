@@ -71,7 +71,7 @@ M.default = {
   green700 = hsl(68, 100, 20),
   green900 = hsl(68, 100, 10),
 
-  bg = hsl(192, 100, 5),
+  bg = "#1d1d1d",
   bg_highlight = hsl(192, 100, 11),
   fg = hsl(186, 8, 55),
 }

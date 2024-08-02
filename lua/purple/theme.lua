@@ -84,10 +84,10 @@ function M.setup()
     TabLine = { fg = c.base0, bg = c.base02, sp = c.base0 }, -- tab pages line, not active tab page label
     TabLineFill = { fg = c.base0, bg = c.base02 }, -- tab pages line, where there are no labels
     TabLineSel = { fg = c.yellow500, bg = c.bg }, -- tab pages line, active tab page label
-    Title = { fg = c.orange500, bold = true }, -- titles for output from ":set all", ":autocmd" etc.
+    Title = { fg = c.green100, bold = true }, -- titles for output from ":set all", ":autocmd" etc.
     Visual = { bg = c.base03, reverse = true }, -- Visual mode selection
     VisualNOS = { bg = c.base03, reverse = true }, -- Visual mode selection when vim is "Not Owning the Selection".
-    WarningMsg = { fg = c.orange500, bold = true }, -- warning messages
+    WarningMsg = { fg = c.green100, bold = true }, -- warning messages
     Whitespace = { fg = c.base01 }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
     WildMenu = { fg = c.base2, bg = c.base02, reverse = true }, -- current match in 'wildmenu' completion
     WinBar = { link = "StatusLine" }, -- window bar
@@ -133,7 +133,7 @@ function M.setup()
     -- Tag           = { }, --    you can use CTRL-] on this
     -- Delimiter     = { }, --  character that needs attention
     -- SpecialComment= { }, -- special things inside a comment
-    Debug = { fg = c.orange500 }, --    debugging statements
+    Debug = { fg = c.green100 }, --    debugging statements
 
     Underlined = { underline = true }, -- (preferred) text that stands out, HTML links
     Bold = { bold = true },
@@ -154,11 +154,11 @@ function M.setup()
     -- mkdHeading = { fg = c.orange, bold = true },
     mkdCode = { bg = c.green900 },
     mkdCodeDelimiter = { fg = c.base0, bg = c.green700 },
-    mkdCodeStart = { fg = c.orange500, bold = true },
-    mkdCodeEnd = { fg = c.orange500, bold = true },
+    mkdCodeStart = { fg = c.green100, bold = true },
+    mkdCodeEnd = { fg = c.green100, bold = true },
     -- mkdLink = { fg = c.blue, underline = true },
 
-    markdownHeadingDelimiter = { fg = c.orange500, bold = true },
+    markdownHeadingDelimiter = { fg = c.green100, bold = true },
     markdownCode = { fg = c.yellow500, bg = c.green900 },
     markdownCodeBlock = { fg = c.yellow500, bg = c.green900 },
     markdownH1 = { fg = c.magenta500, bold = true },
@@ -268,20 +268,20 @@ function M.setup()
 
     --- Punctuation
     ["@punctuation.delimiter"] = { fg = c.green500 }, -- For delimiters ie: `.`
-    ["@punctuation.bracket"] = { fg = c.orange500 }, -- For brackets and parens.
-    ["@punctuation.special"] = { fg = c.orange500 }, -- For special punctutation that does not fall in the catagories before.
-    ["@punctuation.special.markdown"] = { fg = c.orange500, bold = true },
+    ["@punctuation.bracket"] = { fg = c.green100 }, -- For brackets and parens.
+    ["@punctuation.special"] = { fg = c.green100 }, -- For special punctutation that does not fall in the catagories before.
+    ["@punctuation.special.markdown"] = { fg = c.green100, bold = true },
     ["@markup.list"] = { fg = c.blue500 }, -- For special punctutation that does not fall in the catagories before.
-    ["@markup.list.markdown"] = { fg = c.orange500, bold = true },
+    ["@markup.list.markdown"] = { fg = c.green100, bold = true },
 
     --- Literals
     ["@string.documentation"] = { fg = c.cyan500 },
     ["@string.regexp"] = { fg = c.cyan300 }, -- For regexes.
-    ["@string.escape"] = { fg = c.orange700 }, -- For escape characters within a string.
+    ["@string.escape"] = { fg = c.green100 }, -- For escape characters within a string.
 
     --- Functions
-    ["@constructor"] = { fg = c.orange500 }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
-    ["@variable.parameter"] = { fg = c.orange500 }, -- For parameters of a function.
+    ["@constructor"] = { fg = c.green100 }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
+    ["@variable.parameter"] = { fg = c.green100 }, -- For parameters of a function.
     ["@variable.parameter.builtin"] = { fg = c.yellow300 }, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
 
     --- Keywords
@@ -297,8 +297,8 @@ function M.setup()
 
     --- Identifiers
     ["@variable"] = { fg = c.base0, style = options.styles.variables }, -- Any variable name that does not have another highlight.
-    ["@variable.builtin"] = { fg = c.orange500 }, -- Variable names that are defined by the languages, like `this` or `self`.
-    ["@module.builtin"] = { fg = c.orange500 }, -- Variable names that are defined by the languages, like `this` or `self`.
+    ["@variable.builtin"] = { fg = c.green100 }, -- Variable names that are defined by the languages, like `this` or `self`.
+    ["@module.builtin"] = { fg = c.green100 }, -- Variable names that are defined by the languages, like `this` or `self`.
 
     --- Text
     -- ["@markup.raw.markdown"] = { fg = c.blue },
@@ -316,7 +316,7 @@ function M.setup()
 
     -- tsx
     ["@constructor.tsx"] = { fg = c.blue500 },
-    ["@tag.delimiter.tsx"] = { fg = c.orange500 },
+    ["@tag.delimiter.tsx"] = { fg = c.green100 },
     ["@tag.tsx"] = { fg = c.yellow500 },
     ["@keyword.return.tsx"] = { fg = c.green500, style = "italic" },
     ["@keyword.tsx"] = { fg = c.green500, style = "italic" },
@@ -325,15 +325,15 @@ function M.setup()
     ["@variable.typescript"] = { fg = c.yellow500 },
 
     -- Vue
-    ["@tag.delimiter.vue"] = { fg = c.orange500 },
+    ["@tag.delimiter.vue"] = { fg = c.green100 },
 
     -- html
-    ["@tag.delimiter.html"] = { fg = c.orange500 },
+    ["@tag.delimiter.html"] = { fg = c.green100 },
 
     -- javascriptreact
     ["@keyword.javascript"] = { fg = c.green500, style = "italic" },
     ["@keyword.return.javascript"] = { fg = c.green500, style = "italic" },
-    ["@tag.delimiter.javascript"] = { fg = c.orange500 },
+    ["@tag.delimiter.javascript"] = { fg = c.green100 },
     ["@tag.javascript"] = { fg = c.yellow500 },
     ["@variable.javascript"] = { fg = c.yellow500 },
 
@@ -384,7 +384,7 @@ function M.setup()
 
     -- ts-rainbow
     rainbowcol1 = { fg = c.red500 },
-    rainbowcol2 = { fg = c.orange500 },
+    rainbowcol2 = { fg = c.green100 },
     rainbowcol3 = { fg = c.yellow500 },
     rainbowcol4 = { fg = c.green500 },
     rainbowcol5 = { fg = c.cyan500 },
@@ -426,7 +426,7 @@ function M.setup()
     diffRemoved = { fg = c.red500 },
     diffChanged = { fg = c.yellow500 },
     diffOldFile = { fg = c.violet500 },
-    diffNewFile = { fg = c.orange500 },
+    diffNewFile = { fg = c.green100 },
     diffFile = { fg = c.blue500 },
     diffLine = { fg = c.base01 },
     diffIndexLine = { fg = c.magenta500 },
@@ -516,7 +516,7 @@ function M.setup()
     DashboardHeader = { fg = c.blue },
     DashboardCenter = { fg = c.magenta },
     DashboardFooter = { fg = c.yellow, italic = true },
-    DashboardKey = { fg = c.orange500 },
+    DashboardKey = { fg = c.green100 },
     DashboardDesc = { fg = c.cyan500 },
     DashboardIcon = { fg = c.cyan500, bold = true },
 
@@ -722,7 +722,7 @@ function M.setup()
 
     IblIndent = { fg = c.base03, nocombine = true },
     IndentBlanklineChar = { fg = c.base03, nocombine = true },
-    IndentBlanklineContextChar = { fg = c.orange500, nocombine = true },
+    IndentBlanklineContextChar = { fg = c.green100, nocombine = true },
 
     -- Scrollbar
     ScrollbarHandle = { fg = c.none, bg = c.bg_highlight },
