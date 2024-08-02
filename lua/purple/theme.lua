@@ -118,12 +118,12 @@ function M.setup()
     -- Exception     = { }, --  try, catch, throw
 
     PreProc = { fg = c.pink }, -- (preferred) generic Preprocessor
-    -- Include       = { }, --  preprocessor #include
+    Include       = { fg = c.pink }, --  preprocessor #include
     -- Define        = { }, --   preprocessor #define
     -- Macro         = { }, --    same as Define
     -- PreCondit     = { }, --  preprocessor #if, #else, #endif, etc.
 
-    Type = { fg = c.yellow500 }, -- (preferred) int, long, char, etc.
+    Type = { fg = "#d1d1d1" }, -- (preferred) int, long, char, etc.
     -- StorageClass  = { }, -- static, register, volatile, etc.
     -- Structure     = { }, --  struct, union, enum, etc.
     -- Typedef       = { }, --  A typedef
