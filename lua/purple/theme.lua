@@ -106,7 +106,7 @@ function M.setup()
     -- Boolean       = { }, --  a boolean constant: TRUE, false
     -- Float         = { }, --    a floating point constant: 2.3e10
 
-    Identifier = { fg = c.green, style = options.styles.variables }, -- (preferred) any variable name
+    Identifier = { fg = c.blue100, style = options.styles.variables }, -- (preferred) any variable name
     Function = { fg = c.blue500, style = options.styles.functions }, -- function name (also: methods for classes)
 
     Statement = { fg = "#ff5eed" }, -- (preferred) any statement
