@@ -65,7 +65,7 @@ function M.setup()
     NormalFloat = { fg = c.base0, bg = c.bg_float }, -- Normal text in floating windows.
     FloatBorder = { fg = c.yellow700, bg = c.bg_float },
     FloatTitle = { fg = c.base2, bg = c.bg_float },
-    Pmenu = { fg = c.base0, bg = c.base02 }, -- Popup menu: normal item.
+    Pmenu = { fg = c.base0, bg = "#302c2c" }, -- Popup menu: normal item.
     PmenuSel = { fg = c.base01, bg = c.base2, reverse = true }, -- Popup menu: selected item.
     PmenuSbar = { fg = c.base02, reverse = true }, -- Popup menu: scrollbar.
     PmenuThumb = { fg = c.base0, reverse = true }, -- Popup menu: Thumb of the scrollbar.
@@ -151,7 +151,7 @@ function M.setup()
     htmlH1 = { fg = c.magenta500, bold = true },
     htmlH2 = { fg = c.blue500, bold = true },
 
-    -- mkdHeading = { fg = c.orange, bold = true },
+    -- mkdHeading = { fg = c.pink, bold = true },
     mkdCode = { bg = c.green900 },
     mkdCodeDelimiter = { fg = c.base0, bg = c.green700 },
     mkdCodeStart = { fg = c.blue100, bold = true },
@@ -393,7 +393,7 @@ function M.setup()
 
     -- ts-rainbow2 (maintained fork)
     TSRainbowRed = { fg = c.red },
-    TSRainbowOrange = { fg = c.orange },
+    TSRainbowOrange = { fg = c.pink },
     TSRainbowYellow = { fg = c.yellow },
     TSRainbowGreen = { fg = c.green },
     TSRainbowBlue = { fg = c.blue },
@@ -521,9 +521,9 @@ function M.setup()
     DashboardIcon = { fg = c.cyan500, bold = true },
 
     -- Alpha
-    AlphaShortcut = { fg = c.orange },
+    AlphaShortcut = { fg = c.pink },
     AlphaHeader = { fg = c.blue },
-    AlphaHeaderLabel = { fg = c.orange },
+    AlphaHeaderLabel = { fg = c.pink },
     AlphaFooter = { fg = c.cyan },
     AlphaButtons = { fg = c.cyan },
 
@@ -637,7 +637,7 @@ function M.setup()
     LightspeedLabelDistant = { fg = c.cyan, bold = true, underline = true },
     LightspeedLabelDistantOverlapped = { fg = c.cyan500, underline = true },
     LightspeedLabelOverlapped = { fg = c.magenta500, underline = true },
-    LightspeedMaskedChar = { fg = c.orange },
+    LightspeedMaskedChar = { fg = c.pink },
     LightspeedOneCharMatch = { bg = c.magenta500, fg = c.fg, bold = true },
     LightspeedPendingOpArea = { bg = c.magenta500, fg = c.fg },
     LightspeedShortcut = { bg = c.magenta500, fg = c.fg, bold = true, underline = true },
@@ -673,12 +673,12 @@ function M.setup()
     CmpItemKindMethod = { fg = c.blue, bg = c.none },
     CmpItemKindConstructor = { fg = c.blue, bg = c.none },
 
-    CmpItemKindClass = { fg = c.orange, bg = c.none },
-    CmpItemKindInterface = { fg = c.orange, bg = c.none },
-    CmpItemKindStruct = { fg = c.orange, bg = c.none },
-    CmpItemKindEvent = { fg = c.orange, bg = c.none },
-    CmpItemKindEnum = { fg = c.orange, bg = c.none },
-    CmpItemKindUnit = { fg = c.orange, bg = c.none },
+    CmpItemKindClass = { fg = c.pink, bg = c.none },
+    CmpItemKindInterface = { fg = c.pink, bg = c.none },
+    CmpItemKindStruct = { fg = c.pink, bg = c.none },
+    CmpItemKindEvent = { fg = c.pink, bg = c.none },
+    CmpItemKindEnum = { fg = c.pink, bg = c.none },
+    CmpItemKindUnit = { fg = c.pink, bg = c.none },
 
     CmpItemKindModule = { fg = c.yellow, bg = c.none },
 
@@ -694,27 +694,27 @@ function M.setup()
     NavicIconsModule = { fg = c.yellow, bg = c.bg_statusline },
     NavicIconsNamespace = { fg = c.fg, bg = c.bg_statusline },
     NavicIconsPackage = { fg = c.fg, bg = c.bg_statusline },
-    NavicIconsClass = { fg = c.orange, bg = c.bg_statusline },
+    NavicIconsClass = { fg = c.pink, bg = c.bg_statusline },
     NavicIconsMethod = { fg = c.blue, bg = c.bg_statusline },
     NavicIconsProperty = { fg = c.cyan, bg = c.bg_statusline },
     NavicIconsField = { fg = c.cyan, bg = c.bg_statusline },
-    NavicIconsConstructor = { fg = c.orange, bg = c.bg_statusline },
-    NavicIconsEnum = { fg = c.orange, bg = c.bg_statusline },
-    NavicIconsInterface = { fg = c.orange, bg = c.bg_statusline },
+    NavicIconsConstructor = { fg = c.pink, bg = c.bg_statusline },
+    NavicIconsEnum = { fg = c.pink, bg = c.bg_statusline },
+    NavicIconsInterface = { fg = c.pink, bg = c.bg_statusline },
     NavicIconsFunction = { fg = c.blue, bg = c.bg_statusline },
     NavicIconsVariable = { fg = c.magenta, bg = c.bg_statusline },
     NavicIconsConstant = { fg = c.magenta, bg = c.bg_statusline },
     NavicIconsString = { fg = c.green, bg = c.bg_statusline },
-    NavicIconsNumber = { fg = c.orange, bg = c.bg_statusline },
-    NavicIconsBoolean = { fg = c.orange, bg = c.bg_statusline },
-    NavicIconsArray = { fg = c.orange, bg = c.bg_statusline },
-    NavicIconsObject = { fg = c.orange, bg = c.bg_statusline },
+    NavicIconsNumber = { fg = c.pink, bg = c.bg_statusline },
+    NavicIconsBoolean = { fg = c.pink, bg = c.bg_statusline },
+    NavicIconsArray = { fg = c.pink, bg = c.bg_statusline },
+    NavicIconsObject = { fg = c.pink, bg = c.bg_statusline },
     NavicIconsKey = { fg = c.violet500, bg = c.bg_statusline },
     NavicIconsKeyword = { fg = c.violet500, bg = c.bg_statusline },
-    NavicIconsNull = { fg = c.orange, bg = c.bg_statusline },
+    NavicIconsNull = { fg = c.pink, bg = c.bg_statusline },
     NavicIconsEnumMember = { fg = c.cyan, bg = c.bg_statusline },
-    NavicIconsStruct = { fg = c.orange, bg = c.bg_statusline },
-    NavicIconsEvent = { fg = c.orange, bg = c.bg_statusline },
+    NavicIconsStruct = { fg = c.pink, bg = c.bg_statusline },
+    NavicIconsEvent = { fg = c.pink, bg = c.bg_statusline },
     NavicIconsOperator = { fg = c.fg, bg = c.bg_statusline },
     NavicIconsTypeParameter = { fg = c.cyan, bg = c.bg_statusline },
     NavicText = { fg = c.fg, bg = c.bg_statusline },
@@ -727,8 +727,8 @@ function M.setup()
     -- Scrollbar
     ScrollbarHandle = { fg = c.none, bg = c.bg_highlight },
 
-    ScrollbarSearchHandle = { fg = c.orange, bg = c.bg_highlight },
-    ScrollbarSearch = { fg = c.orange, bg = c.none },
+    ScrollbarSearchHandle = { fg = c.pink, bg = c.bg_highlight },
+    ScrollbarSearch = { fg = c.pink, bg = c.none },
 
     ScrollbarErrorHandle = { fg = c.error, bg = c.bg_highlight },
     ScrollbarError = { fg = c.error, bg = c.none },
@@ -835,7 +835,7 @@ function M.setup()
     MiniIconsCyan = { fg = c.cyan },
     MiniIconsGreen = { fg = c.green },
     MiniIconsGrey = { fg = c.base2 },
-    MiniIconsOrange = { fg = c.orange },
+    MiniIconsOrange = { fg = c.pink },
     MiniIconsPurple = { fg = c.violet },
     MiniIconsRed = { fg = c.red },
     MiniIconsYellow = { fg = c.yellow },
@@ -896,7 +896,7 @@ function M.setup()
     MiniStatuslineModeReplace = { fg = c.black, bg = c.red, bold = true },
     MiniStatuslineModeVisual = { fg = c.black, bg = c.magenta, bold = true },
 
-    MiniSurround = { bg = c.orange, fg = c.black },
+    MiniSurround = { bg = c.pink, fg = c.black },
 
     MiniTablineCurrent = { fg = c.fg, bg = c.base02, bold = true },
     MiniTablineFill = { bg = c.black },

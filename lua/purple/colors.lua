@@ -28,7 +28,6 @@ M.default = {
   yellow500 = hsl(45, 100, 35),
   yellow700 = hsl(45, 100, 20),
   yellow900 = hsl(46, 100, 10),
-  orange = "#ff5eed",
   pink = "#ff5eed",
   red = "#a52aff",
   red100 = "#ba5aff",
