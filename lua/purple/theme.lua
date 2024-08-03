@@ -107,7 +107,7 @@ function M.setup()
     -- Float         = { }, --    a floating point constant: 2.3e10
 
     Identifier = { fg = c.blue100, style = options.styles.variables }, -- (preferred) any variable name
-    Function = { fg = c.blue500, style = options.styles.functions }, -- function name (also: methods for classes)
+    Function = { fg = c.cyan100, style = options.styles.functions }, -- function name (also: methods for classes)
 
     Statement = { fg = "#ff5eed" }, -- (preferred) any statement
     -- Conditional   = { }, --  if, then, else, endif, switch, etc.
@@ -473,7 +473,7 @@ function M.setup()
     GitSignsDelete = { fg = "#ff4444" }, -- diff mode: Deleted line |diff.txt|
 
     -- Telescope
-    TelescopeBorder = { fg = c.base02, bg = c.bg_float },
+    TelescopeBorder = { fg = c.base04, bg = c.bg_float },
     TelescopeNormal = { fg = c.base0, bg = c.bg_float },
 
     -- NvimTree
