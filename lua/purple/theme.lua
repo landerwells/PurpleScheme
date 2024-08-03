@@ -26,7 +26,7 @@ function M.setup()
 
   theme.highlights = {
     Comment = { fg = "#51545c", style = options.styles.comments }, -- any comment
-    ColorColumn = { bg = "#1d1d1d" }, -- used for the columns set with 'colorcolumn'
+    ColorColumn = { bg = "#171717" }, -- used for the columns set with 'colorcolumn'
     Conceal = { fg = c.blue500 }, -- placeholder characters substituted for concealed text (see 'conceallevel')
     Cursor = { fg = "#d1d1d1", bg = "#1d1d1d" }, -- character under the cursor
     lCursor = { fg = c.base03, bg = c.base00 }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
@@ -113,7 +113,7 @@ function M.setup()
     -- Conditional   = { }, --  if, then, else, endif, switch, etc.
     -- Repeat        = { }, --   for, do, while, etc.
     -- Label         = { }, --    case, default, etc.
-    Operator = { fg = c.green500 }, -- "sizeof", "+", "*", etc.
+    Operator = { fg = "#d1d1d1" }, -- "sizeof", "+", "*", etc.
     Keyword = { fg = c.green500, style = options.styles.keywords }, --  any other keyword
     -- Exception     = { }, --  try, catch, throw
 
