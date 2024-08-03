@@ -100,7 +100,7 @@ function M.setup()
     -- Uncomment and edit if you want more specific syntax highlighting.
 
     Constant = { fg = c.blue100 }, -- (preferred) any constant
-    String = { fg = c.cyan500 }, --   a string constant: "this is a string"
+    String = { fg = c.red }, --   a string constant: "this is a string"
     Character = { link = "Constant" }, --  a character constant: 'c', '\n'
     -- Number        = { }, --   a number constant: 234, 0xff
     Boolean       = { fg = "#5effc3" }, --  a boolean constant: TRUE, false

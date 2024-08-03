@@ -9,7 +9,7 @@ M.default = {
   none = "NONE",
 
   background = "#1d1d1d",
-  base04 = hsl(192, 100, 5),
+  base04 = "#171717",
   base03 = hsl(192, 100, 11),
   base02 = hsl(192, 81, 14),
   -- Comments
