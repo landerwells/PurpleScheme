@@ -67,7 +67,7 @@ function M.setup()
     FloatTitle = { fg = c.base2, bg = c.bg_float },
     Pmenu = { fg = c.base0, bg = "#302c2c" }, -- Popup menu: normal item.
     PmenuSel = { fg = c.base01, bg = c.base2, reverse = true }, -- Popup menu: selected item.
-    PmenuSbar = { fg = c.base02, reverse = true }, -- Popup menu: scrollbar.
+    PmenuSbar = { fg = c.base04, reverse = true }, -- Popup menu: scrollbar.
     PmenuThumb = { fg = c.base0, reverse = true }, -- Popup menu: Thumb of the scrollbar.
     Question = { fg = c.cyan500, bold = true }, -- |hit-enter| prompt and yes/no questions
     QuickFixLine = { bg = c.blue700, bold = true }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
@@ -81,7 +81,7 @@ function M.setup()
     SpellRare = { sp = c.yellow500, undercurl = true }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
     StatusLine = { fg = c.base1, bg = c.base03 }, -- status line of current window
     StatusLineNC = { fg = c.base0, bg = c.base04 }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
-    TabLine = { fg = c.base0, bg = c.base02, sp = c.base0 }, -- tab pages line, not active tab page label
+    TabLine = { fg = c.base0, bg = c.base01, sp = c.base0 }, -- tab pages line, not active tab page label
     TabLineFill = { fg = c.base0, bg = c.base02 }, -- tab pages line, where there are no labels
     TabLineSel = { fg = c.yellow500, bg = c.bg }, -- tab pages line, active tab page label
     Title = { fg = c.blue100, bold = true }, -- titles for output from ":set all", ":autocmd" etc.
@@ -100,7 +100,7 @@ function M.setup()
     -- Uncomment and edit if you want more specific syntax highlighting.
 
     Constant = { fg = c.blue100 }, -- (preferred) any constant
-    String = { fg = c.red }, --   a string constant: "this is a string"
+    String = { fg = c.red100 }, --   a string constant: "this is a string"
     Character = { link = "Constant" }, --  a character constant: 'c', '\n'
     -- Number        = { }, --   a number constant: 234, 0xff
     Boolean       = { fg = "#5effc3" }, --  a boolean constant: TRUE, false
@@ -114,7 +114,7 @@ function M.setup()
     -- Repeat        = { }, --   for, do, while, etc.
     -- Label         = { }, --    case, default, etc.
     Operator = { fg = "#d1d1d1" }, -- "sizeof", "+", "*", etc.
-    Keyword = { fg = c.green500, style = options.styles.keywords }, --  any other keyword
+    Keyword = { fg =  c.pink, style = options.styles.keywords }, --  any other keyword
     -- Exception     = { }, --  try, catch, throw
 
     PreProc = { fg = c.pink }, -- (preferred) generic Preprocessor
@@ -264,7 +264,7 @@ function M.setup()
     --- Misc
     -- TODO:
     -- ["@comment.documentation"] = { },
-    ["@operator"] = { fg = c.green500 }, -- For any operator: `+`, but also `->` and `*` in C.
+    ["@operator"] = { fg = "#d1d1d1" }, -- For any operator: `+`, but also `->` and `*` in C.
 
     --- Punctuation
     ["@punctuation.delimiter"] = { fg = c.green500 }, -- For delimiters ie: `.`
@@ -286,7 +286,7 @@ function M.setup()
 
     --- Keywords
     ["@keyword"] = { fg = "#ff5eed", style = options.styles.keywords }, -- For keywords that don't fall in previous categories.
-    ["@keyword.function"] = { fg = c.green500, style = options.styles.functions }, -- For keywords used to define a fuction.
+    ["@keyword.function"] = { fg = c.pink, style = options.styles.functions }, -- For keywords used to define a fuction.
 
     ["@label"] = { fg = "#ff5eed" }, -- For labels: `label:` in C and `:label:` in Lua.
 
@@ -704,7 +704,7 @@ function M.setup()
     NavicIconsFunction = { fg = c.blue, bg = c.bg_statusline },
     NavicIconsVariable = { fg = c.magenta, bg = c.bg_statusline },
     NavicIconsConstant = { fg = c.magenta, bg = c.bg_statusline },
-    NavicIconsString = { fg = c.green, bg = c.bg_statusline },
+    NavicIconsString = { fg = c.red100, bg = c.bg_statusline },
     NavicIconsNumber = { fg = c.pink, bg = c.bg_statusline },
     NavicIconsBoolean = { fg = c.pink, bg = c.bg_statusline },
     NavicIconsArray = { fg = c.pink, bg = c.bg_statusline },
