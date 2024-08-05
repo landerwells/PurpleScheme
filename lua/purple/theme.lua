@@ -43,7 +43,7 @@ function M.setup()
     -- TermCursorNC= { }, -- cursor in an unfocused terminal
     ErrorMsg = { fg = c.red500, reverse = true }, -- error messages on the command line
     VertSplit = { fg = c.base00 }, -- the column separating vertically split windows
-    WinSeparator = { fg = c.base02, bold = true }, -- the column separating vertically split windows
+    WinSeparator = { fg = "#808080", bold = true }, -- the column separating vertically split windows
     Folded = { fg = c.base0, bg = c.base02, bold = true }, -- line used for closed folds
     FoldColumn = { fg = c.base0 }, -- 'foldcolumn'
     SignColumn = { fg = c.base0 }, -- column where |signs| are displayed
@@ -473,7 +473,7 @@ function M.setup()
     GitSignsDelete = { fg = "#ff4444" }, -- diff mode: Deleted line |diff.txt|
 
     -- Telescope
-    TelescopeBorder = { fg = c.base04, bg = c.bg_float },
+    TelescopeBorder = { fg = c.base01, bg = c.bg_float },
     TelescopeNormal = { fg = c.base0, bg = c.bg_float },
 
     -- NvimTree
