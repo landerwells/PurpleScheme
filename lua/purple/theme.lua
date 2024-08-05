@@ -55,7 +55,7 @@ function M.setup()
     CursorLineNr = { fg = "#d1d1d1", sp = c.base1 }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     -- CursorLineNr = { fg = "#d1d1d1" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     MatchParen = { fg = c.red100, bg = c.red500, bold = true }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
-    ModeMsg = { fg = 500 }, -- 'showmode' message (e.g., "-- INSERT -- ")
+    ModeMsg = { fg = c.base01 }, -- 'showmode' message (e.g., "-- INSERT -- ")
     MsgArea = { fg = c.base01 }, -- Area for messages and cmdline
     -- MsgSeparator= { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
     MoreMsg = { fg = c.base01 }, -- |more-prompt|
@@ -71,7 +71,7 @@ function M.setup()
     PmenuSbar = { fg = c.base04, reverse = true }, -- Popup menu: scrollbar.
     PmenuThumb = { fg = c.base0, reverse = true }, -- Popup menu: Thumb of the scrollbar.
     Question = { fg = c.cyan500, bold = true }, -- |hit-enter| prompt and yes/no questions
-    QuickFixLine = { bg = c.blue700, bold = true }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
+    QuickFixLine = { bg = c.blue100, bold = true }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
     Search = { fg = "#383838" }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
     IncSearch = { fg = "#4f4f4f", standout = true }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     CurSearch = { link = "IncSearch" },
@@ -86,7 +86,8 @@ function M.setup()
     TabLineFill = { fg = c.base0, bg = c.base02 }, -- tab pages line, where there are no labels
     TabLineSel = { fg = c.yellow500, bg = c.bg }, -- tab pages line, active tab page label
     Title = { fg = c.blue100, bold = true }, -- titles for output from ":set all", ":autocmd" etc.
-    Visual = { bg = c.base03, reverse = true }, -- Visual mode selection
+    -- Visual = { bg = "#2f2f2f", reverse = true }, -- Visual mode selection
+    Visual = { bg = "#2f2f2f"}, -- Visual mode selection
     VisualNOS = { bg = c.base03, reverse = true }, -- Visual mode selection when vim is "Not Owning the Selection".
     WarningMsg = { fg = c.blue100, bold = true }, -- warning messages
     Whitespace = { fg = c.base01 }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
