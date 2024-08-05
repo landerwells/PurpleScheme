@@ -27,22 +27,22 @@ function M.setup()
   theme.highlights = {
     Comment = { fg = "#51545c", style = options.styles.comments }, -- any comment
     ColorColumn = { bg = "#171717" }, -- used for the columns set with 'colorcolumn'
-    Conceal = { fg = c.blue500 }, -- placeholder characters substituted for concealed text (see 'conceallevel')
+    -- Conceal = { fg = c.base01 }, -- placeholder characters substituted for concealed text (see 'conceallevel')
     Cursor = { fg = "#d1d1d1", bg = "#1d1d1d" }, -- character under the cursor
-    lCursor = { fg = c.base03, bg = c.base00 }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
-    CursorIM = { fg = c.base03, bg = c.base0 }, -- like Cursor, but used when in IME mode |CursorIM|
-    CursorColumn = { bg = c.base02 }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
+    -- lCursor = { fg = c.base03, bg = c.base00 }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
+    -- CursorIM = { fg = c.base03, bg = c.base0 }, -- like Cursor, but used when in IME mode |CursorIM|
+    -- CursorColumn = { bg = c.base02 }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
     CursorLine = { bg = "#262626", sp = c.base1 }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
     Directory = { fg = "#d1d1d1" }, -- directory names (and other special names in listings)
-    DiffAdd = { fg = c.green500, bg = c.base02, bold = true }, -- diff mode: Added line |diff.txt|
-    DiffChange = { fg = c.yellow500, bg = c.base02, bold = true }, -- diff mode: Changed line |diff.txt|
-    DiffDelete = { fg = c.red500, bg = c.base02, bold = true }, -- diff mode: Deleted line |diff.txt|
-    DiffText = { fg = c.blue500, bg = c.base02, bold = true }, -- diff mode: Changed text within a changed line |diff.txt|
+    DiffAdd = { fg = "#5aff5d", bg = c.base02, bold = true }, -- diff mode: Added line |diff.txt|
+    DiffChange = { fg = "#ffae44", bg = c.base02, bold = true }, -- diff mode: Changed line |diff.txt|
+    DiffDelete = { fg = "#ff4444", bg = c.base02, bold = true }, -- diff mode: Deleted line |diff.txt|
+    DiffText = { fg = c.base01, bg = c.base02, bold = true }, -- diff mode: Changed text within a changed line |diff.txt|
     EndOfBuffer = { fg = c.base01 }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
     -- TermCursor  = { }, -- cursor in a focused terminal
     -- TermCursorNC= { }, -- cursor in an unfocused terminal
     ErrorMsg = { fg = c.red500, reverse = true }, -- error messages on the command line
-    VertSplit = { fg = c.base00 }, -- the column separating vertically split windows
+    VertSplit = { fg =  "#272727" }, -- the column separating vertically split windows
     -- WinSeparator = { fg = "#272727", bold = true }, -- the column separating vertically split windows
     WinSeparator = { fg = "#272727" },
     Folded = { fg = c.base0, bg = c.base02, bold = true }, -- line used for closed folds
@@ -50,15 +50,15 @@ function M.setup()
     SignColumn = { fg = c.base0 }, -- column where |signs| are displayed
     SignColumnSB = { fg = c.base0 }, -- column where |signs| are displayed
     Substitute = { fg = c.base04, bg = c.red500 }, -- |:substitute| replacement text highlighting
-    -- LineNr = { fg = "#7e7e7e", bg = options.transparent and c.none or c.bg }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-    LineNr = { fg = "#7e7e7e" }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-    -- CursorLineNr = { fg = "#d1d1d1", sp = c.base1 }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
-    CursorLineNr = { fg = "#d1d1d1" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+    LineNr = { fg = "#7e7e7e", bg = options.transparent and c.none or c.bg }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+    -- LineNr = { fg = "#7e7e7e" }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+    CursorLineNr = { fg = "#d1d1d1", sp = c.base1 }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+    -- CursorLineNr = { fg = "#d1d1d1" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     MatchParen = { fg = c.red100, bg = c.red500, bold = true }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
-    ModeMsg = { fg = c.blue500 }, -- 'showmode' message (e.g., "-- INSERT -- ")
+    ModeMsg = { fg = 500 }, -- 'showmode' message (e.g., "-- INSERT -- ")
     MsgArea = { fg = c.base01 }, -- Area for messages and cmdline
     -- MsgSeparator= { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
-    MoreMsg = { fg = c.blue500 }, -- |more-prompt|
+    MoreMsg = { fg = c.base01 }, -- |more-prompt|
     NonText = { fg = c.base00, bold = true }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
     Normal = { fg = c.base0, bg = options.transparent and c.none or c.bg }, -- normal text
     NormalNC = { fg = c.base00, bg = options.transparent and c.none or options.dim_inactive and c.base04 or c.bg }, -- normal text in non-current windows
@@ -150,7 +150,7 @@ function M.setup()
     qfFileName = { fg = c.violet500 },
 
     htmlH1 = { fg = c.magenta500, bold = true },
-    htmlH2 = { fg = c.blue500, bold = true },
+    htmlH2 = { fg = c.base01, bold = true },
 
     -- mkdHeading = { fg = c.pink, bold = true },
     mkdCode = { bg = c.green900 },
@@ -164,9 +164,9 @@ function M.setup()
     markdownCodeBlock = { fg = c.yellow500, bg = c.green900 },
     markdownH1 = { fg = c.magenta500, bold = true },
     markdownH2 = { fg = c.violet500, bold = true },
-    markdownLinkText = { fg = c.blue500, underline = true },
+    markdownLinkText = { fg = c.base01, underline = true },
 
-    ["helpCommand"] = { fg = c.blue500, bg = c.blue900 },
+    ["helpCommand"] = { fg = c.base01, bg = c.blue900 },
 
     debugPC = { bg = c.bg_sidebar }, -- used for highlighting the current line in terminal-debug
     debugBreakpoint = { fg = c.blue300, bg = c.blue700 }, -- used for breakpoint colors in terminal-debug
@@ -188,7 +188,7 @@ function M.setup()
 
     DiagnosticVirtualTextError = { bg = c.red900, fg = c.red500 }, -- Used for "Error" diagnostic virtual text
     DiagnosticVirtualTextWarn = { bg = c.yellow900, fg = c.yellow500 }, -- Used for "Warning" diagnostic virtual text
-    DiagnosticVirtualTextInfo = { bg = c.blue900, fg = c.blue500 }, -- Used for "Information" diagnostic virtual text
+    DiagnosticVirtualTextInfo = { bg = c.blue900, fg = c.base01 }, -- Used for "Information" diagnostic virtual text
     DiagnosticVirtualTextHint = { bg = c.cyan900, fg = c.cyan500 }, -- Used for "Hint" diagnostic virtual text
 
     DiagnosticUnderlineError = { undercurl = true, sp = c.error }, -- Used to underline "Error" diagnostics
@@ -272,7 +272,7 @@ function M.setup()
     ["@punctuation.bracket"] = { fg = c.blue100 }, -- For brackets and parens.
     ["@punctuation.special"] = { fg = c.blue100 }, -- For special punctutation that does not fall in the catagories before.
     ["@punctuation.special.markdown"] = { fg = c.blue100, bold = true },
-    ["@markup.list"] = { fg = c.blue500 }, -- For special punctutation that does not fall in the catagories before.
+    ["@markup.list"] = { fg = c.base01 }, -- For special punctutation that does not fall in the catagories before.
     ["@markup.list.markdown"] = { fg = c.blue100, bold = true },
 
     --- Literals
@@ -304,7 +304,7 @@ function M.setup()
     --- Text
     -- ["@markup.raw.markdown"] = { fg = c.blue },
     ["@markup.raw.markdown_inline"] = { fg = c.yellow500, bg = c.green900 },
-    ["@markup.link"] = { fg = c.blue500, underline = true },
+    ["@markup.link"] = { fg = c.base01, underline = true },
 
     ["@markup.list.unchecked"] = { fg = c.yellow500 }, -- For brackets and parens.
     ["@markup.list.checked"] = { fg = c.green500 }, -- For brackets and parens.
@@ -316,7 +316,7 @@ function M.setup()
     ["@module"] = { link = "Include" },
 
     -- tsx
-    ["@constructor.tsx"] = { fg = c.blue500 },
+    ["@constructor.tsx"] = { fg = c.base01 },
     ["@tag.delimiter.tsx"] = { fg = c.blue100 },
     ["@tag.tsx"] = { fg = c.yellow500 },
     ["@keyword.return.tsx"] = { fg = c.green500, style = "italic" },
@@ -349,7 +349,7 @@ function M.setup()
     ["@lsp.type.escapeSequence"] = { link = "@string.escape" },
     ["@lsp.type.formatSpecifier"] = { link = "@markup.list" },
     ["@lsp.type.generic"] = { link = "@variable" },
-    ["@lsp.type.interface"] = { fg = c.blue500 },
+    ["@lsp.type.interface"] = { fg = c.base01 },
     ["@lsp.type.keyword"] = { link = "@keyword" },
     ["@lsp.type.lifetime"] = { link = "@keyword.storage" },
     ["@lsp.type.namespace"] = { link = "@module" },
@@ -374,8 +374,8 @@ function M.setup()
     ["@lsp.typemod.operator.injected"] = { link = "@operator" },
     ["@lsp.typemod.string.injected"] = { link = "@string" },
     ["@lsp.typemod.struct.defaultLibrary"] = { link = "@type.builtin" },
-    ["@lsp.typemod.type.defaultLibrary"] = { fg = c.blue500 },
-    ["@lsp.typemod.typeAlias.defaultLibrary"] = { fg = c.blue500 },
+    ["@lsp.typemod.type.defaultLibrary"] = { fg = c.base01 },
+    ["@lsp.typemod.typeAlias.defaultLibrary"] = { fg = c.base01 },
     ["@lsp.typemod.variable.callable"] = { link = "@function" },
     ["@lsp.typemod.variable.defaultLibrary"] = { link = "@variable.builtin" },
     ["@lsp.typemod.variable.injected"] = { link = "@variable" },
@@ -389,7 +389,7 @@ function M.setup()
     rainbowcol3 = { fg = c.yellow500 },
     rainbowcol4 = { fg = c.green500 },
     rainbowcol5 = { fg = c.cyan500 },
-    rainbowcol6 = { fg = c.blue500 },
+    rainbowcol6 = { fg = c.base01 },
     rainbowcol7 = { fg = c.magenta500 },
 
     -- ts-rainbow2 (maintained fork)
@@ -428,7 +428,7 @@ function M.setup()
     diffChanged = { fg = c.yellow500 },
     diffOldFile = { fg = c.violet500 },
     diffNewFile = { fg = c.blue100 },
-    diffFile = { fg = c.blue500 },
+    diffFile = { fg = c.base01 },
     diffLine = { fg = c.base01 },
     diffIndexLine = { fg = c.magenta500 },
 
@@ -436,7 +436,7 @@ function M.setup()
     NeogitBranch = { fg = c.magenta500 },
     NeogitRemote = { fg = c.violet500 },
     NeogitHunkHeader = { fg = c.base0, bg = c.base02 },
-    NeogitHunkHeaderHighlight = { fg = c.blue500, bg = c.base02 },
+    NeogitHunkHeaderHighlight = { fg = c.base01, bg = c.base02 },
     NeogitDiffContextHighlight = { fg = c.base00, bg = c.base02 },
     NeogitDiffDeleteHighlight = { fg = c.red500, bg = c.red900 },
     NeogitDiffAddHighlight = { fg = c.green500, bg = c.green900 },
@@ -445,19 +445,19 @@ function M.setup()
     NeotestPassed = { fg = c.green500 },
     NeotestRunning = { fg = c.yellow500 },
     NeotestFailed = { fg = c.red500 },
-    NeotestSkipped = { fg = c.blue500 },
+    NeotestSkipped = { fg = c.base01 },
     NeotestTest = { fg = c.base00 },
     NeotestNamespace = { fg = c.cyan500 },
     NeotestFocused = { fg = c.yellow500 },
     NeotestFile = { fg = c.cyan500 },
-    NeotestDir = { fg = c.blue500 },
-    NeotestBorder = { fg = c.blue500 },
+    NeotestDir = { fg = c.base01 },
+    NeotestBorder = { fg = c.base01 },
     NeotestIndent = { fg = c.base00 },
     NeotestExpandMarker = { fg = c.base0 },
     NeotestAdapterName = { fg = c.violet500, bold = true },
-    NeotestWinSelect = { fg = c.blue500 },
-    NeotestMarked = { fg = c.blue500 },
-    NeotestTarget = { fg = c.blue500 },
+    NeotestWinSelect = { fg = c.base01 },
+    NeotestMarked = { fg = c.base01 },
+    NeotestTarget = { fg = c.base01 },
     --[[ NeotestUnknown = {}, ]]
 
     -- GitGutter
