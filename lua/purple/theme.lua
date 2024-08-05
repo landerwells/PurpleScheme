@@ -43,7 +43,8 @@ function M.setup()
     -- TermCursorNC= { }, -- cursor in an unfocused terminal
     ErrorMsg = { fg = c.red500, reverse = true }, -- error messages on the command line
     VertSplit = { fg = c.base00 }, -- the column separating vertically split windows
-    WinSeparator = { fg = "#808080", bold = true }, -- the column separating vertically split windows
+    -- WinSeparator = { fg = "#272727", bold = true }, -- the column separating vertically split windows
+    WinSeparator = { fg = "#272727" },
     Folded = { fg = c.base0, bg = c.base02, bold = true }, -- line used for closed folds
     FoldColumn = { fg = c.base0 }, -- 'foldcolumn'
     SignColumn = { fg = c.base0 }, -- column where |signs| are displayed
