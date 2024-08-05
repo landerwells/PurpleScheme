@@ -72,7 +72,7 @@ function M.setup()
     PmenuThumb = { fg = c.base0, reverse = true }, -- Popup menu: Thumb of the scrollbar.
     Question = { fg = c.cyan500, bold = true }, -- |hit-enter| prompt and yes/no questions
     QuickFixLine = { bg = c.blue700, bold = true }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-    Search = { fg = "#383838", reverse = true }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+    Search = { fg = "#383838" }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
     IncSearch = { fg = "#4f4f4f", standout = true }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     CurSearch = { link = "IncSearch" },
     SpecialKey = { fg = c.base00 }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
@@ -268,7 +268,7 @@ function M.setup()
     ["@operator"] = { fg = "#d1d1d1" }, -- For any operator: `+`, but also `->` and `*` in C.
 
     --- Punctuation
-    ["@punctuation.delimiter"] = { fg = c.green500 }, -- For delimiters ie: `.`
+    ["@punctuation.delimiter"] = { fg = "#d1d1d1" }, -- For delimiters ie: `.`
     ["@punctuation.bracket"] = { fg = c.blue100 }, -- For brackets and parens.
     ["@punctuation.special"] = { fg = c.blue100 }, -- For special punctutation that does not fall in the catagories before.
     ["@punctuation.special.markdown"] = { fg = c.blue100, bold = true },
