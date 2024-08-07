@@ -277,7 +277,7 @@ function M.setup()
     ["@markup.list.markdown"] = { fg = c.blue100, bold = true },
 
     --- Literals
-    ["@string.documentation"] = { fg = c.cyan500 },
+    ["@string.documentation"] = { fg = c.cyan100 },
     ["@string.regexp"] = { fg = c.cyan100 }, -- For regexes.
     ["@string.escape"] = { fg = c.blue100 }, -- For escape characters within a string.
 
@@ -294,7 +294,7 @@ function M.setup()
 
     --- Types
     ["@type.builtin"] = { link = "Type" },
-    ["@variable.member"] = { fg = c.cyan500 }, -- For fields.
+    ["@variable.member"] = { fg = "#ffffff" }, -- For fields.
     ["@property"] = { link = "Identifier" },
 
     --- Identifiers
@@ -389,7 +389,7 @@ function M.setup()
     rainbowcol2 = { fg = c.blue100 },
     rainbowcol3 = { fg = c.yellow500 },
     rainbowcol4 = { fg = c.green500 },
-    rainbowcol5 = { fg = c.cyan500 },
+    rainbowcol5 = { fg = c.cyan100 },
     rainbowcol6 = { fg = c.base01 },
     rainbowcol7 = { fg = c.magenta500 },
 
@@ -448,9 +448,9 @@ function M.setup()
     NeotestFailed = { fg = c.red500 },
     NeotestSkipped = { fg = c.base01 },
     NeotestTest = { fg = c.base00 },
-    NeotestNamespace = { fg = c.cyan500 },
+    NeotestNamespace = { fg = c.cyan100 },
     NeotestFocused = { fg = c.yellow500 },
-    NeotestFile = { fg = c.cyan500 },
+    NeotestFile = { fg = c.cyan100 },
     NeotestDir = { fg = c.base01 },
     NeotestBorder = { fg = c.base01 },
     NeotestIndent = { fg = c.base00 },
@@ -519,8 +519,8 @@ function M.setup()
     DashboardCenter = { fg = c.magenta },
     DashboardFooter = { fg = c.yellow, italic = true },
     DashboardKey = { fg = c.blue100 },
-    DashboardDesc = { fg = c.cyan500 },
-    DashboardIcon = { fg = c.cyan500, bold = true },
+    DashboardDesc = { fg = c.cyan100 },
+    DashboardIcon = { fg = c.cyan100, bold = true },
 
     -- Alpha
     AlphaShortcut = { fg = c.pink },
@@ -557,7 +557,7 @@ function M.setup()
     DefinitionCount = { fg = c.violet500 },
     DefinitionIcon = { fg = c.blue },
     ReferencesIcon = { fg = c.blue },
-    TargetWord = { fg = c.cyan500 },
+    TargetWord = { fg = c.cyan100 },
 
     -- NeoVim
     healthError = { fg = c.error },
@@ -637,7 +637,7 @@ function M.setup()
     -- LightspeedCursor = { link = "Cursor" },
     LightspeedLabel = { fg = c.magenta500, bold = true, underline = true },
     LightspeedLabelDistant = { fg = c.cyan, bold = true, underline = true },
-    LightspeedLabelDistantOverlapped = { fg = c.cyan500, underline = true },
+    LightspeedLabelDistantOverlapped = { fg = c.cyan100, underline = true },
     LightspeedLabelOverlapped = { fg = c.magenta500, underline = true },
     LightspeedMaskedChar = { fg = c.pink },
     LightspeedOneCharMatch = { bg = c.magenta500, fg = c.fg, bold = true },
@@ -661,9 +661,9 @@ function M.setup()
 
     CmpItemKindDefault = { fg = c.base01, bg = c.none },
 
-    CmpItemKindCodeium = { fg = c.cyan500, bg = c.none },
-    CmpItemKindCopilot = { fg = c.cyan500, bg = c.none },
-    CmpItemKindTabNine = { fg = c.cyan500, bg = c.none },
+    CmpItemKindCodeium = { fg = c.cyan100, bg = c.none },
+    CmpItemKindCopilot = { fg = c.cyan100, bg = c.none },
+    CmpItemKindTabNine = { fg = c.cyan100, bg = c.none },
 
     CmpItemKindKeyword = { fg = c.cyan, bg = c.none },
     CmpItemKindVariable = { fg = c.magenta, bg = c.none },
@@ -849,7 +849,7 @@ function M.setup()
 
     MiniJump2dDim = { fg = c.base01 },
     MiniJump2dSpot = { fg = c.magenta500, bold = true, nocombine = true },
-    MiniJump2dSpotAhead = { fg = c.cyan500, bg = c.black, nocombine = true },
+    MiniJump2dSpotAhead = { fg = c.cyan100, bg = c.black, nocombine = true },
     MiniJump2dSpotUnique = { fg = c.yellow500, bold = true, nocombine = true },
 
     MiniMapNormal = { link = "NormalFloat" },
@@ -894,7 +894,7 @@ function M.setup()
     MiniStatuslineModeCommand = { fg = c.black, bg = c.yellow, bold = true },
     MiniStatuslineModeInsert = { fg = c.black, bg = c.green, bold = true },
     MiniStatuslineModeNormal = { fg = c.black, bg = c.blue, bold = true },
-    MiniStatuslineModeOther = { fg = c.black, bg = c.cyan500, bold = true },
+    MiniStatuslineModeOther = { fg = c.black, bg = c.cyan100, bold = true },
     MiniStatuslineModeReplace = { fg = c.black, bg = c.red, bold = true },
     MiniStatuslineModeVisual = { fg = c.black, bg = c.magenta, bold = true },
 

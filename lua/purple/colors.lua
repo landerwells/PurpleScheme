@@ -48,7 +48,6 @@ M.default = {
   blue = "#2b4fff",
   blue100 = "#5c78ff",
   blue300 = hsl(205, 90, 62),
-  blue500 = hsl(205, 69, 49),
   blue700 = hsl(205, 70, 35),
   blue900 = hsl(205, 69, 20),
   cyan = "#28b9ff",
@@ -105,9 +104,9 @@ function M.setup(opts)
 
   colors.error = "#d35454"
   colors.warning = "#d38454"
-  colors.info = colors.blue500
-  colors.hint = colors.cyan500
-  colors.todo = colors.violet500
+  colors.info = colors.blue100
+  colors.hint = colors.cyan100
+  colors.todo = colors.violet100
 
   config.options.on_colors(colors)
   if opts.transform and config.is_day() then
