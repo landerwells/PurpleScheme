@@ -294,7 +294,7 @@ function M.setup()
 
     --- Types
     ["@type.builtin"] = { link = "Type" },
-    ["@variable.member"] = { fg = "#ffffff" }, -- For fields.
+    ["@variable.member"] = { fg = c.blue100 }, -- For fields.
     ["@property"] = { link = "Identifier" },
 
     --- Identifiers
