@@ -61,7 +61,6 @@ M.default = {
   cyan900 = hsl(183, 58, 15),
   green = "#7129ff",
   green100 = "#905aff",
-  green300 = hsl(76, 100, 49),
   green500 = hsl(68, 100, 30),
   green700 = hsl(68, 100, 20),
   green900 = hsl(68, 100, 10),
