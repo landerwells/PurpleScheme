@@ -37,7 +37,6 @@ M.default = {
   red900 = hsl(1, 71, 20),
   magenta = "#2883ff",
   magenta100 = "#5ea2ff",
-  magenta300 = hsl(331, 86, 64),
   magenta500 = hsl(331, 64, 52),
   magenta700 = hsl(331, 64, 42),
   magenta900 = hsl(331, 65, 20),
