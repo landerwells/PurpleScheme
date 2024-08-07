@@ -30,7 +30,7 @@ purple_local.terminal = {
 }
 
 purple_local.inactive = {
-  a = { bg = colors.bg_statusline, fg = colors.blue },
+  a = { bg = colors.bg_statusline, fg = colors.base01 },
   b = { bg = colors.bg_statusline, fg = colors.fg, gui = "bold" },
   c = { bg = colors.bg_statusline, fg = colors.fg },
 }

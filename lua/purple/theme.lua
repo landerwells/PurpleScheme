@@ -65,9 +65,9 @@ function M.setup()
     NormalSB = { fg = c.base01, bg = c.bg_sidebar }, -- normal text in sidebar
     NormalFloat = { fg = c.base0, bg = c.bg_float }, -- Normal text in floating windows.
     FloatBorder = { fg = c.base01, bg = c.bg_float },
-    FloatTitle = { fg = c.base2, bg = c.bg_float },
+    FloatTitle = { fg = c.white, bg = c.bg_float },
     Pmenu = { fg = c.base0, bg = "#302c2c" }, -- Popup menu: normal item.
-    PmenuSel = { fg = c.base01, bg = c.base2, reverse = true }, -- Popup menu: selected item.
+    PmenuSel = { fg = c.base01, bg = c.white, reverse = true }, -- Popup menu: selected item.
     PmenuSbar = { fg = c.base04, reverse = true }, -- Popup menu: scrollbar.
     PmenuThumb = { fg = c.base0, reverse = true }, -- Popup menu: Thumb of the scrollbar.
     Question = { fg = c.cyan100, bold = true }, -- |hit-enter| prompt and yes/no questions
@@ -91,7 +91,7 @@ function M.setup()
     VisualNOS = { bg = c.base03, reverse = true }, -- Visual mode selection when vim is "Not Owning the Selection".
     WarningMsg = { fg = c.blue100, bold = true }, -- warning messages
     Whitespace = { fg = c.base01 }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
-    WildMenu = { fg = c.base2, bg = c.base02, reverse = true }, -- current match in 'wildmenu' completion
+    WildMenu = { fg = c.white, bg = c.base02, reverse = true }, -- current match in 'wildmenu' completion
     WinBar = { link = "StatusLine" }, -- window bar
     WinBarNC = { link = "StatusLineNC" }, -- window bar in inactive windows
 
@@ -177,9 +177,9 @@ function M.setup()
     -- These groups are for the native LSP client. Some other LSP clients may
     -- use these groups, or use their own. Consult your LSP client's
     -- documentation.
-    LspReferenceText = { bg = c.magenta900 }, -- used for highlighting "text" references
-    LspReferenceRead = { bg = c.magenta900 }, -- used for highlighting "read" references
-    LspReferenceWrite = { bg = c.magenta900 }, -- used for highlighting "write" references
+    LspReferenceText = { bg = c.magenta100 }, -- used for highlighting "text" references
+    LspReferenceRead = { bg = c.magenta100 }, -- used for highlighting "read" references
+    LspReferenceWrite = { bg = c.magenta100 }, -- used for highlighting "write" references
 
     DiagnosticError = { fg = c.error }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
     DiagnosticWarn = { fg = c.warning }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
@@ -420,8 +420,8 @@ function M.setup()
     illuminatedWord = { bg = c.violet900 },
     illuminatedCurWord = { bg = c.violet900 },
     IlluminatedWordText = { bg = c.violet900 },
-    IlluminatedWordRead = { bg = c.magenta900 },
-    IlluminatedWordWrite = { bg = c.magenta900 },
+    IlluminatedWordRead = { bg = c.magenta100 },
+    IlluminatedWordWrite = { bg = c.magenta100 },
 
     -- diff
     diffAdded = { fg = c.green500 },
@@ -722,8 +722,8 @@ function M.setup()
     NavicText = { fg = c.fg, bg = c.bg_statusline },
     NavicSeparator = { fg = c.fg, bg = c.bg_statusline },
 
-    IblIndent = { fg = c.base03, nocombine = true },
-    IndentBlanklineChar = { fg = c.base03, nocombine = true },
+    IblIndent = { fg = c.base01, nocombine = true },
+    IndentBlanklineChar = { fg = c.base01, nocombine = true },
     IndentBlanklineContextChar = { fg = c.blue100, nocombine = true },
 
     -- Scrollbar
@@ -836,7 +836,7 @@ function M.setup()
     MiniIconsBlue = { fg = c.blue },
     MiniIconsCyan = { fg = c.cyan },
     MiniIconsGreen = { fg = c.green },
-    MiniIconsGrey = { fg = c.base2 },
+    MiniIconsGrey = { fg = c.white },
     MiniIconsOrange = { fg = c.pink },
     MiniIconsPurple = { fg = c.violet },
     MiniIconsRed = { fg = c.red },
