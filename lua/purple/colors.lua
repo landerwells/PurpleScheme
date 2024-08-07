@@ -8,6 +8,10 @@ local M = {}
 M.default = {
   none = "NONE",
 
+  gitGreen = "#5aff5d",
+  gitOrange = "#ffae44",
+  gitRed = "#ff4444",
+
   background = "#1d1d1d",
   base04 = "#171717",
   base03 = hsl(192, 100, 11),
@@ -39,7 +43,6 @@ M.default = {
   magenta100 = "#5ea2ff",
   magenta500 = hsl(331, 64, 52),
   magenta700 = hsl(331, 64, 42),
-  magenta900 = hsl(331, 65, 20),
   violet = hsl(237, 43, 60),
   violet100 = hsl(236, 100, 90),
   violet300 = hsl(237, 69, 77),
@@ -57,11 +60,9 @@ M.default = {
   cyan300 = hsl(175, 85, 55),
   cyan500 = hsl(175, 59, 40),
   cyan700 = hsl(182, 59, 25),
-  cyan900 = hsl(183, 58, 15),
   green = "#7129ff",
   green100 = "#905aff",
   green500 = hsl(68, 100, 30),
-  green700 = hsl(68, 100, 20),
   green900 = hsl(68, 100, 10),
 
   bg = "#1d1d1d",

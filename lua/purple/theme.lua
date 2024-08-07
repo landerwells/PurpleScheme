@@ -34,9 +34,9 @@ function M.setup()
     -- CursorColumn = { bg = c.base02 }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
     CursorLine = { bg = "#262626", sp = c.base1 }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
     Directory = { fg = "#d1d1d1" }, -- directory names (and other special names in listings)
-    DiffAdd = { fg = "#5aff5d", bg = c.base02, bold = true }, -- diff mode: Added line |diff.txt|
-    DiffChange = { fg = "#ffae44", bg = c.base02, bold = true }, -- diff mode: Changed line |diff.txt|
-    DiffDelete = { fg = "#ff4444", bg = c.base02, bold = true }, -- diff mode: Deleted line |diff.txt|
+    DiffAdd = { fg = c.gitGreen, bg = c.base02, bold = true }, -- diff mode: Added line |diff.txt|
+    DiffChange = { fg = c.gitOrange, bg = c.base02, bold = true }, -- diff mode: Changed line |diff.txt|
+    DiffDelete = { fg = c.gitRed, bg = c.base02, bold = true }, -- diff mode: Deleted line |diff.txt|
     DiffText = { fg = c.base01, bg = c.base02, bold = true }, -- diff mode: Changed text within a changed line |diff.txt|
     EndOfBuffer = { fg = c.base01 }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
     -- TermCursor  = { }, -- cursor in a focused terminal
@@ -72,7 +72,7 @@ function M.setup()
     PmenuThumb = { fg = c.base0, reverse = true }, -- Popup menu: Thumb of the scrollbar.
     Question = { fg = c.cyan100, bold = true }, -- |hit-enter| prompt and yes/no questions
     QuickFixLine = { bg = c.blue100, bold = true }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-    Search = { fg = "#2f2f2f" }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+    Search = { fg = "#2f2f2f", reverse = true }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
     IncSearch = { fg = "#4f4f4f", standout = true }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     CurSearch = { link = "IncSearch" },
     SpecialKey = { fg = c.base00 }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
@@ -155,7 +155,7 @@ function M.setup()
 
     -- mkdHeading = { fg = c.pink, bold = true },
     mkdCode = { bg = c.green900 },
-    mkdCodeDelimiter = { fg = c.base0, bg = c.green700 },
+    mkdCodeDelimiter = { fg = c.base0, bg = c.green100 },
     mkdCodeStart = { fg = c.blue100, bold = true },
     mkdCodeEnd = { fg = c.blue100, bold = true },
     -- mkdLink = { fg = c.blue, underline = true },
@@ -190,7 +190,7 @@ function M.setup()
     DiagnosticVirtualTextError = { bg = c.red900, fg = c.red500 }, -- Used for "Error" diagnostic virtual text
     DiagnosticVirtualTextWarn = { bg = c.yellow900, fg = c.yellow500 }, -- Used for "Warning" diagnostic virtual text
     DiagnosticVirtualTextInfo = { bg = c.blue900, fg = c.base01 }, -- Used for "Information" diagnostic virtual text
-    DiagnosticVirtualTextHint = { bg = c.cyan900, fg = c.cyan500 }, -- Used for "Hint" diagnostic virtual text
+    DiagnosticVirtualTextHint = { bg = c.cyan100, fg = c.base01 }, -- Used for "Hint" diagnostic virtual text
 
     DiagnosticUnderlineError = { undercurl = true, sp = c.error }, -- Used to underline "Error" diagnostics
     DiagnosticUnderlineWarn = { undercurl = true, sp = c.warning }, -- Used to underline "Warning" diagnostics
