@@ -59,9 +59,9 @@ function M.setup()
     MsgArea = { fg = c.base01 }, -- Area for messages and cmdline
     -- MsgSeparator= { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
     MoreMsg = { fg = c.base01 }, -- |more-prompt|
-    NonText = { fg = c.base00, bold = true }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+    NonText = { fg = c.base01, bold = true }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
     Normal = { fg = c.base0, bg = options.transparent and c.none or c.bg }, -- normal text
-    NormalNC = { fg = c.base00, bg = options.transparent and c.none or options.dim_inactive and c.base04 or c.bg }, -- normal text in non-current windows
+    -- NormalNC = { fg = c.base00, bg = options.transparent and c.none or options.dim_inactive and c.base04 or c.bg }, -- normal text in non-current windows
     NormalSB = { fg = c.base01, bg = c.bg_sidebar }, -- normal text in sidebar
     NormalFloat = { fg = c.base0, bg = c.bg_float }, -- Normal text in floating windows.
     FloatBorder = { fg = c.base01, bg = c.bg_float },
@@ -75,7 +75,7 @@ function M.setup()
     Search = { fg = "#2f2f2f", reverse = true }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
     IncSearch = { fg = "#4f4f4f", standout = true }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     CurSearch = { link = "IncSearch" },
-    SpecialKey = { fg = c.base00 }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
+    SpecialKey = { fg = c.base01 }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
     SpellBad = { sp = c.red100, undercurl = true }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
     SpellCap = { sp = c.violet100, undercurl = true }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
     SpellLocal = { sp = c.cyan100, undercurl = true }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
@@ -147,7 +147,8 @@ function M.setup()
     Error = { fg = c.red500 }, -- (preferred) any erroneous construct
     Todo = { fg = c.magenta500, bold = true }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
-    qfLineNr = { fg = c.base0 },
+    -- Not sure what this actually does?
+    -- qfLineNr = { fg = c.base0 },
     qfFileName = { fg = c.violet500 },
 
     htmlH1 = { fg = c.magenta500, bold = true },
