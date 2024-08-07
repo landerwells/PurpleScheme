@@ -53,7 +53,6 @@ M.default = {
   blue900 = hsl(205, 69, 20),
   cyan = "#28b9ff",
   cyan100 = "#5ac8ff",
-  cyan300 = hsl(175, 85, 55),
   cyan500 = hsl(175, 59, 40),
   cyan700 = hsl(182, 59, 25),
   green = "#7129ff",
@@ -104,8 +103,8 @@ function M.setup(opts)
   -- colors.fg_float = config.options.styles.floats == "dark" and colors.base01 or colors.fg
   colors.fg_float = colors.fg
 
-  colors.error = colors.red500
-  colors.warning = colors.yellow500
+  colors.error = "#d35454"
+  colors.warning = "#d38454"
   colors.info = colors.blue500
   colors.hint = colors.cyan500
   colors.todo = colors.violet500

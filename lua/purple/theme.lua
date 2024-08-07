@@ -28,10 +28,10 @@ function M.setup()
     Comment = { fg = "#51545c", style = options.styles.comments }, -- any comment
     ColorColumn = { bg = "#171717" }, -- used for the columns set with 'colorcolumn'
     -- Conceal = { fg = c.base01 }, -- placeholder characters substituted for concealed text (see 'conceallevel')
-    Cursor = { fg = "#d1d1d1", bg = "#1d1d1d" }, -- character under the cursor
-    -- lCursor = { fg = c.base03, bg = c.base00 }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
-    -- CursorIM = { fg = c.base03, bg = c.base0 }, -- like Cursor, but used when in IME mode |CursorIM|
-    -- CursorColumn = { bg = c.base02 }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
+    Cursor = { fg = "#ffffff", bg = "#1d1d1d" }, -- character under the cursor
+    lCursor = { fg = c.base03, bg = c.base00 }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
+    CursorIM = { fg = c.base03, bg = c.base0 }, -- like Cursor, but used when in IME mode |CursorIM|
+    CursorColumn = { bg = c.base02 }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
     CursorLine = { bg = "#262626", sp = c.base1 }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
     Directory = { fg = "#d1d1d1" }, -- directory names (and other special names in listings)
     DiffAdd = { fg = c.gitGreen, bg = c.base02, bold = true }, -- diff mode: Added line |diff.txt|
@@ -50,10 +50,10 @@ function M.setup()
     SignColumn = { fg = c.base0 }, -- column where |signs| are displayed
     SignColumnSB = { fg = c.base0 }, -- column where |signs| are displayed
     Substitute = { fg = c.base04, bg = c.red500 }, -- |:substitute| replacement text highlighting
-    LineNr = { fg = "#7e7e7e", bg = options.transparent and c.none or c.bg }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-    -- LineNr = { fg = "#7e7e7e" }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-    CursorLineNr = { fg = "#d1d1d1", sp = c.base1 }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
-    -- CursorLineNr = { fg = "#d1d1d1" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+    -- LineNr = { fg = "#7e7e7e", bg = options.transparent and c.none or c.bg }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+    LineNr = { fg = "#7e7e7e" }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+    -- CursorLineNr = { fg = "#d1d1d1", sp = c.base1 }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+    CursorLineNr = { fg = "#d1d1d1" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     MatchParen = { fg = c.red100, bg = c.red500, bold = true }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg = { fg = c.base01 }, -- 'showmode' message (e.g., "-- INSERT -- ")
     MsgArea = { fg = c.base01 }, -- Area for messages and cmdline
@@ -89,7 +89,7 @@ function M.setup()
     -- Visual = { bg = "#2f2f2f", reverse = true }, -- Visual mode selection
     Visual = { bg = "#2f2f2f"}, -- Visual mode selection
     VisualNOS = { bg = c.base03, reverse = true }, -- Visual mode selection when vim is "Not Owning the Selection".
-    WarningMsg = { fg = c.blue100, bold = true }, -- warning messages
+    WarningMsg = { fg = c.warning, bold = true }, -- warning messages
     Whitespace = { fg = c.base01 }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
     WildMenu = { fg = c.white, bg = c.base02, reverse = true }, -- current match in 'wildmenu' completion
     WinBar = { link = "StatusLine" }, -- window bar
@@ -278,7 +278,7 @@ function M.setup()
 
     --- Literals
     ["@string.documentation"] = { fg = c.cyan500 },
-    ["@string.regexp"] = { fg = c.cyan300 }, -- For regexes.
+    ["@string.regexp"] = { fg = c.cyan100 }, -- For regexes.
     ["@string.escape"] = { fg = c.blue100 }, -- For escape characters within a string.
 
     --- Functions
@@ -845,7 +845,7 @@ function M.setup()
     MiniIndentscopeSymbol = { fg = c.violet700, nocombine = true },
     MiniIndentscopeSymbolOff = { fg = c.warning, nocombine = true },
 
-    MiniJump = { bg = c.magenta500, fg = c.base4 },
+    MiniJump = { bg = c.magenta500, fg = c.base1 },
 
     MiniJump2dDim = { fg = c.base01 },
     MiniJump2dSpot = { fg = c.magenta500, bold = true, nocombine = true },
