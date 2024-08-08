@@ -12,7 +12,6 @@ M.default = {
   gitOrange = "#ffae44",
   gitRed = "#ff4444",
 
-  background = "#1d1d1d",
   base04 = "#171717",
   base03 = hsl(192, 100, 11),
   base02 = hsl(192, 81, 14),
