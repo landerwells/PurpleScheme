@@ -11,6 +11,8 @@ M.default = {
   gitGreen = "#5aff5d",
   gitOrange = "#ffae44",
   gitRed = "#ff4444",
+  temp = "#ffd700",
+  temp2 = "#5effc3",
 
   base04 = "#171717",
   base03 = hsl(192, 100, 11),
@@ -19,7 +21,6 @@ M.default = {
   base01 = "#51545c",
   base00 = hsl(196, 13, 45),
   base0 = hsl(186, 8, 65),
-  base1 = hsl(180, 7, 70),
   white = "#d1d1d1",
   yellow = "#3d2aff",
   yellow100 = "#685aff",
@@ -47,7 +48,6 @@ M.default = {
   cyan100 = "#5ac8ff",
   green = "#7129ff",
   green100 = "#905aff",
-  green500 = hsl(68, 100, 30),
   green900 = hsl(68, 100, 10),
 
   bg = "#1d1d1d",

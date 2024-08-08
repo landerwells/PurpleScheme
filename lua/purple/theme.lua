@@ -32,7 +32,7 @@ function M.setup()
     lCursor = { fg = c.base03, bg = c.base00 }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
     CursorIM = { fg = c.base03, bg = c.base0 }, -- like Cursor, but used when in IME mode |CursorIM|
     CursorColumn = { bg = c.base02 }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
-    CursorLine = { bg = "#262626", sp = c.base1 }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
+    CursorLine = { bg = "#262626", sp = c.white }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
     Directory = { fg = "#d1d1d1" }, -- directory names (and other special names in listings)
     DiffAdd = { fg = c.gitGreen, bg = c.base02, bold = true }, -- diff mode: Added line |diff.txt|
     DiffChange = { fg = c.gitOrange, bg = c.base02, bold = true }, -- diff mode: Changed line |diff.txt|
@@ -78,7 +78,7 @@ function M.setup()
     SpellCap = { sp = c.violet100, undercurl = true }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
     SpellLocal = { sp = c.cyan100, undercurl = true }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
     SpellRare = { sp = c.gitOrange, undercurl = true }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
-    StatusLine = { fg = c.base1, bg = c.base03 }, -- status line of current window
+    StatusLine = { fg = c.white, bg = c.base03 }, -- status line of current window
     StatusLineNC = { fg = c.base0, bg = c.base04 }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
     TabLine = { fg = c.base0, bg = c.base01, sp = c.base0 }, -- tab pages line, not active tab page label
     TabLineFill = { fg = c.base0, bg = c.base02 }, -- tab pages line, where there are no labels
@@ -102,7 +102,7 @@ function M.setup()
     Constant = { fg = c.blue100 }, -- (preferred) any constant
     String = { fg = c.red100 }, --   a string constant: "this is a string"
     Character = { link = "Constant" }, --  a character constant: 'c', '\n'
-    -- Number        = { }, --   a number constant: 234, 0xff
+    Number        = { fg = "#5effc3" }, --   a number constant: 234, 0xff
     Boolean       = { fg = "#5effc3" }, --  a boolean constant: TRUE, false
     -- Float         = { }, --    a floating point constant: 2.3e10
 
@@ -297,7 +297,7 @@ function M.setup()
     ["@property"] = { link = "Identifier" },
 
     --- Identifiers
-    ["@variable"] = { fg = c.base0, style = options.styles.variables }, -- Any variable name that does not have another highlight.
+    ["@variable"] = { fg = c.blue100, style = options.styles.variables }, -- Any variable name that does not have another highlight.
     ["@variable.builtin"] = { fg = c.blue100 }, -- Variable names that are defined by the languages, like `this` or `self`.
     ["@module.builtin"] = { fg = c.blue100 }, -- Variable names that are defined by the languages, like `this` or `self`.
 
@@ -307,7 +307,7 @@ function M.setup()
     ["@markup.link"] = { fg = c.base01, underline = true },
 
     ["@markup.list.unchecked"] = { fg = c.gitOrange }, -- For brackets and parens.
-    ["@markup.list.checked"] = { fg = c.green500 }, -- For brackets and parens.
+    ["@markup.list.checked"] = { fg = c.pink }, -- For brackets and parens.
 
     ["@diff.plus"] = { link = "DiffAdd" },
     ["@diff.minus"] = { link = "DiffDelete" },
@@ -319,8 +319,8 @@ function M.setup()
     ["@constructor.tsx"] = { fg = c.base01 },
     ["@tag.delimiter.tsx"] = { fg = c.blue100 },
     ["@tag.tsx"] = { fg = c.gitOrange },
-    ["@keyword.return.tsx"] = { fg = c.green500, style = "italic" },
-    ["@keyword.tsx"] = { fg = c.green500, style = "italic" },
+    ["@keyword.return.tsx"] = { fg = c.pink, style = "italic" },
+    ["@keyword.tsx"] = { fg = c.pink, style = "italic" },
 
     -- typescript
     ["@variable.typescript"] = { fg = c.gitOrange },
@@ -332,8 +332,8 @@ function M.setup()
     ["@tag.delimiter.html"] = { fg = c.blue100 },
 
     -- javascriptreact
-    ["@keyword.javascript"] = { fg = c.green500, style = "italic" },
-    ["@keyword.return.javascript"] = { fg = c.green500, style = "italic" },
+    ["@keyword.javascript"] = { fg = c.pink, style = "italic" },
+    ["@keyword.return.javascript"] = { fg = c.pink, style = "italic" },
     ["@tag.delimiter.javascript"] = { fg = c.blue100 },
     ["@tag.javascript"] = { fg = c.gitOrange },
     ["@variable.javascript"] = { fg = c.gitOrange },
@@ -387,7 +387,7 @@ function M.setup()
     rainbowcol1 = { fg = c.red500 },
     rainbowcol2 = { fg = c.blue100 },
     rainbowcol3 = { fg = c.gitOrange },
-    rainbowcol4 = { fg = c.green500 },
+    rainbowcol4 = { fg = c.gitGreen },
     rainbowcol5 = { fg = c.cyan100 },
     rainbowcol6 = { fg = c.base01 },
     rainbowcol7 = { fg = c.magenta100 },
@@ -423,7 +423,7 @@ function M.setup()
     IlluminatedWordWrite = { bg = c.magenta100 },
 
     -- diff
-    diffAdded = { fg = c.green500 },
+    diffAdded = { fg = c.gitGreen },
     diffRemoved = { fg = c.red500 },
     diffChanged = { fg = c.gitOrange },
     diffOldFile = { fg = c.violet500 },
@@ -439,10 +439,10 @@ function M.setup()
     NeogitHunkHeaderHighlight = { fg = c.base01, bg = c.base02 },
     NeogitDiffContextHighlight = { fg = c.base00, bg = c.base02 },
     NeogitDiffDeleteHighlight = { fg = c.red500, bg = c.gitRed },
-    NeogitDiffAddHighlight = { fg = c.green500, bg = c.green900 },
+    NeogitDiffAddHighlight = { fg = c.gitGreen, bg = c.green900 },
 
     -- Neotest
-    NeotestPassed = { fg = c.green500 },
+    NeotestPassed = { fg = c.gitGreen },
     NeotestRunning = { fg = c.gitOrange },
     NeotestFailed = { fg = c.red500 },
     NeotestSkipped = { fg = c.base01 },
@@ -461,10 +461,10 @@ function M.setup()
     --[[ NeotestUnknown = {}, ]]
 
     -- GitGutter
-    GitGutterAdd = { fg = c.green500 }, -- diff mode: Added line |diff.txt|
+    GitGutterAdd = { fg = c.gitGreen }, -- diff mode: Added line |diff.txt|
     GitGutterChange = { fg = c.gitOrange }, -- diff mode: Changed line |diff.txt|
     GitGutterDelete = { fg = c.red500 }, -- diff mode: Deleted line |diff.txt|
-    GitGutterAddLineNr = { fg = c.green500 },
+    GitGutterAddLineNr = { fg = c.gitGreen },
     GitGutterChangeLineNr = { fg = c.gitOrange },
     GitGutterDeleteLineNr = { fg = c.red500 },
 
@@ -844,7 +844,7 @@ function M.setup()
     MiniIndentscopeSymbol = { fg = c.violet700, nocombine = true },
     MiniIndentscopeSymbolOff = { fg = c.warning, nocombine = true },
 
-    MiniJump = { bg = c.magenta100, fg = c.base1 },
+    MiniJump = { bg = c.magenta100, fg = c.white },
 
     MiniJump2dDim = { fg = c.base01 },
     MiniJump2dSpot = { fg = c.magenta100, bold = true, nocombine = true },
