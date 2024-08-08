@@ -29,13 +29,9 @@ M.default = {
   pink = "#ff5eed",
   red = "#a52aff",
   red100 = "#ba5aff",
-  red300 = hsl(1, 90, 64),
-  -- I do actually like red 500 and could probably use it successfully for errors
   red500 = hsl(1, 71, 52),
   magenta = "#2883ff",
   magenta100 = "#5ea2ff",
-  magenta500 = hsl(331, 64, 52),
-  magenta700 = hsl(331, 64, 42),
   violet = hsl(237, 43, 60),
   violet100 = hsl(236, 100, 90),
   violet300 = hsl(237, 69, 77),

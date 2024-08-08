@@ -74,10 +74,10 @@ function M.setup()
     IncSearch = { fg = "#4f4f4f", standout = true }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     CurSearch = { link = "IncSearch" },
     SpecialKey = { fg = c.base01 }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
-    SpellBad = { sp = c.red100, undercurl = true }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
+    SpellBad = { sp = c.red500, undercurl = true }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
     SpellCap = { sp = c.violet100, undercurl = true }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
     SpellLocal = { sp = c.cyan100, undercurl = true }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
-    SpellRare = { sp = c.yellow100, undercurl = true }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
+    SpellRare = { sp = c.gitOrange, undercurl = true }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
     StatusLine = { fg = c.base1, bg = c.base03 }, -- status line of current window
     StatusLineNC = { fg = c.base0, bg = c.base04 }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
     TabLine = { fg = c.base0, bg = c.base01, sp = c.base0 }, -- tab pages line, not active tab page label
@@ -143,13 +143,13 @@ function M.setup()
     -- Ignore = { }, -- (preferred) left blank, hidden  |hl-Ignore|
 
     Error = { fg = c.red500 }, -- (preferred) any erroneous construct
-    Todo = { fg = c.magenta500, bold = true }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+    Todo = { fg = c.magenta100, bold = true }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
     -- Not sure what this actually does?
     -- qfLineNr = { fg = c.base0 },
     qfFileName = { fg = c.violet500 },
 
-    htmlH1 = { fg = c.magenta500, bold = true },
+    htmlH1 = { fg = c.magenta100, bold = true },
     htmlH2 = { fg = c.base01, bold = true },
 
     -- mkdHeading = { fg = c.pink, bold = true },
@@ -162,7 +162,7 @@ function M.setup()
     markdownHeadingDelimiter = { fg = c.blue100, bold = true },
     markdownCode = { fg = c.gitOrange, bg = c.green900 },
     markdownCodeBlock = { fg = c.gitOrange, bg = c.green900 },
-    markdownH1 = { fg = c.magenta500, bold = true },
+    markdownH1 = { fg = c.magenta100, bold = true },
     markdownH2 = { fg = c.violet500, bold = true },
     markdownLinkText = { fg = c.base01, underline = true },
 
@@ -186,10 +186,10 @@ function M.setup()
     DiagnosticHint = { fg = c.hint }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
     DiagnosticUnnecessary = { fg = c.base00 }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
 
-    DiagnosticVirtualTextError = { bg = c.bg, fg = c.error }, -- Used for "Error" diagnostic virtual text
-    DiagnosticVirtualTextWarn = { bg = c.bg, fg = c.warning }, -- Used for "Warning" diagnostic virtual text
-    DiagnosticVirtualTextInfo = { bg = c.bg, fg = c.info }, -- Used for "Information" diagnostic virtual text
-    DiagnosticVirtualTextHint = { bg = c.bg, fg = c.hint }, -- Used for "Hint" diagnostic virtual text
+    DiagnosticVirtualTextError = { fg = c.error }, -- Used for "Error" diagnostic virtual text
+    DiagnosticVirtualTextWarn = { fg = c.warning }, -- Used for "Warning" diagnostic virtual text
+    DiagnosticVirtualTextInfo = { fg = c.info }, -- Used for "Information" diagnostic virtual text
+    DiagnosticVirtualTextHint = { fg = c.hint }, -- Used for "Hint" diagnostic virtual text
 
     DiagnosticUnderlineError = { undercurl = true, sp = c.error }, -- Used to underline "Error" diagnostics
     DiagnosticUnderlineWarn = { undercurl = true, sp = c.warning }, -- Used to underline "Warning" diagnostics
@@ -390,7 +390,7 @@ function M.setup()
     rainbowcol4 = { fg = c.green500 },
     rainbowcol5 = { fg = c.cyan100 },
     rainbowcol6 = { fg = c.base01 },
-    rainbowcol7 = { fg = c.magenta500 },
+    rainbowcol7 = { fg = c.magenta100 },
 
     -- ts-rainbow2 (maintained fork)
     TSRainbowRed = { fg = c.red },
@@ -412,7 +412,7 @@ function M.setup()
 
     -- LspTrouble
     TroubleText = { fg = c.base0 },
-    TroubleCount = { fg = c.magenta500 },
+    TroubleCount = { fg = c.magenta100 },
     TroubleNormal = { fg = c.base0 },
 
     -- Illuminate
@@ -430,10 +430,10 @@ function M.setup()
     diffNewFile = { fg = c.blue100 },
     diffFile = { fg = c.base01 },
     diffLine = { fg = c.base01 },
-    diffIndexLine = { fg = c.magenta500 },
+    diffIndexLine = { fg = c.magenta100 },
 
     -- Neogit
-    NeogitBranch = { fg = c.magenta500 },
+    NeogitBranch = { fg = c.magenta100 },
     NeogitRemote = { fg = c.violet500 },
     NeogitHunkHeader = { fg = c.base0, bg = c.base02 },
     NeogitHunkHeaderHighlight = { fg = c.base01, bg = c.base02 },
@@ -616,32 +616,32 @@ function M.setup()
     SneakScope = { bg = c.base03 },
 
     -- Hop
-    HopNextKey = { fg = c.magenta500, bold = true },
+    HopNextKey = { fg = c.magenta100, bold = true },
     HopNextKey1 = { fg = c.violet500, bold = true },
     HopNextKey2 = { fg = c.violet700 },
     HopUnmatched = { fg = c.base01 },
 
-    TSNodeKey = { fg = c.magenta500, bold = true },
+    TSNodeKey = { fg = c.magenta100, bold = true },
     TSNodeUnmatched = { fg = c.base01 },
 
-    LeapMatch = { bg = c.magenta500, fg = c.fg, bold = true },
-    LeapLabelPrimary = { fg = c.magenta500, bold = true },
+    LeapMatch = { bg = c.magenta100, fg = c.fg, bold = true },
+    LeapLabelPrimary = { fg = c.magenta100, bold = true },
     LeapLabelSecondary = { fg = c.cyan, bold = true },
     LeapBackdrop = { fg = c.base01 },
 
     FlashBackdrop = { fg = c.base01 },
-    FlashLabel = { bg = c.magenta500, bold = true, fg = c.bg },
+    FlashLabel = { bg = c.magenta100, bold = true, fg = c.bg },
 
     LightspeedGreyWash = { fg = c.base01 },
     -- LightspeedCursor = { link = "Cursor" },
-    LightspeedLabel = { fg = c.magenta500, bold = true, underline = true },
+    LightspeedLabel = { fg = c.magenta100, bold = true, underline = true },
     LightspeedLabelDistant = { fg = c.cyan, bold = true, underline = true },
     LightspeedLabelDistantOverlapped = { fg = c.cyan100, underline = true },
-    LightspeedLabelOverlapped = { fg = c.magenta500, underline = true },
+    LightspeedLabelOverlapped = { fg = c.magenta100, underline = true },
     LightspeedMaskedChar = { fg = c.pink },
-    LightspeedOneCharMatch = { bg = c.magenta500, fg = c.fg, bold = true },
-    LightspeedPendingOpArea = { bg = c.magenta500, fg = c.fg },
-    LightspeedShortcut = { bg = c.magenta500, fg = c.fg, bold = true, underline = true },
+    LightspeedOneCharMatch = { bg = c.magenta100, fg = c.fg, bold = true },
+    LightspeedPendingOpArea = { bg = c.magenta100, fg = c.fg },
+    LightspeedShortcut = { bg = c.magenta100, fg = c.fg, bold = true, underline = true },
     -- LightspeedShortcutOverlapped = { link = "LightspeedShortcut" },
     -- LightspeedUniqueChar = { link = "LightspeedUnlabeledMatch" },
     LightspeedUnlabeledMatch = { fg = c.violet500, bold = true },
@@ -751,7 +751,7 @@ function M.setup()
     YankyYanked = { link = "IncSearch" },
 
     -- Lazy
-    LazyProgressDone = { bold = true, fg = c.magenta500 },
+    LazyProgressDone = { bold = true, fg = c.magenta100 },
     LazyProgressTodo = { bold = true, fg = c.base01 },
 
     -- Notify
@@ -844,10 +844,10 @@ function M.setup()
     MiniIndentscopeSymbol = { fg = c.violet700, nocombine = true },
     MiniIndentscopeSymbolOff = { fg = c.warning, nocombine = true },
 
-    MiniJump = { bg = c.magenta500, fg = c.base1 },
+    MiniJump = { bg = c.magenta100, fg = c.base1 },
 
     MiniJump2dDim = { fg = c.base01 },
-    MiniJump2dSpot = { fg = c.magenta500, bold = true, nocombine = true },
+    MiniJump2dSpot = { fg = c.magenta100, bold = true, nocombine = true },
     MiniJump2dSpotAhead = { fg = c.cyan100, bg = c.black, nocombine = true },
     MiniJump2dSpotUnique = { fg = c.gitOrange, bold = true, nocombine = true },
 
