@@ -49,10 +49,8 @@ function M.setup()
     FoldColumn = { fg = c.base0 }, -- 'foldcolumn'
     SignColumn = { fg = c.base0 }, -- column where |signs| are displayed
     SignColumnSB = { fg = c.base0 }, -- column where |signs| are displayed
-    Substitute = { fg = c.base04, bg = c.red500 }, -- |:substitute| replacement text highlighting
-    -- LineNr = { fg = "#7e7e7e", bg = options.transparent and c.none or c.bg }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-    LineNr = { fg = "#7e7e7e" }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-    -- CursorLineNr = { fg = "#d1d1d1", sp = c.base1 }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+    Substitute = { fg = c.base04, bg = c.red100 }, -- |:substitute| replacement text highlighting
+    LineNr = { fg = "#7e7e7e", bg = options.transparent and c.none or c.bg }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     CursorLineNr = { fg = "#d1d1d1" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     MatchParen = { fg = c.red100, bg = c.red500, bold = true }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg = { fg = c.base01 }, -- 'showmode' message (e.g., "-- INSERT -- ")
@@ -190,8 +188,8 @@ function M.setup()
 
     DiagnosticVirtualTextError = { bg = c.bg, fg = c.error }, -- Used for "Error" diagnostic virtual text
     DiagnosticVirtualTextWarn = { bg = c.bg, fg = c.warning }, -- Used for "Warning" diagnostic virtual text
-    DiagnosticVirtualTextInfo = { bg = c.blue900, fg = c.base01 }, -- Used for "Information" diagnostic virtual text
-    DiagnosticVirtualTextHint = { bg = c.cyan100, fg = c.base01 }, -- Used for "Hint" diagnostic virtual text
+    DiagnosticVirtualTextInfo = { bg = c.bg, fg = c.info }, -- Used for "Information" diagnostic virtual text
+    DiagnosticVirtualTextHint = { bg = c.bg, fg = c.hint }, -- Used for "Hint" diagnostic virtual text
 
     DiagnosticUnderlineError = { undercurl = true, sp = c.error }, -- Used to underline "Error" diagnostics
     DiagnosticUnderlineWarn = { undercurl = true, sp = c.warning }, -- Used to underline "Warning" diagnostics

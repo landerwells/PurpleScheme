@@ -10,11 +10,11 @@ purple_local.normal = {
 }
 
 purple_local.insert = {
-  a = { bg = colors.green, fg = colors.black },
+  a = { bg = colors.green100, fg = colors.black },
 }
 
 purple_local.command = {
-  a = { bg = colors.yellow, fg = colors.black },
+  a = { bg = colors.yellow100, fg = colors.black },
 }
 
 purple_local.visual = {
@@ -22,11 +22,11 @@ purple_local.visual = {
 }
 
 purple_local.replace = {
-  a = { bg = colors.red, fg = colors.black },
+  a = { bg = colors.red100, fg = colors.black },
 }
 
 purple_local.terminal = {
-  a = { bg = colors.green, fg = colors.black },
+  a = { bg = colors.pink, fg = colors.black },
 }
 
 purple_local.inactive = {

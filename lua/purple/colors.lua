@@ -101,7 +101,7 @@ function M.setup(opts)
 
   colors.error = "#d35454"
   colors.warning = "#d38454"
-  colors.info = colors.blue100
+  colors.info = "#ffae44"
   colors.hint = colors.cyan100
   colors.todo = colors.violet100
 
