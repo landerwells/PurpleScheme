@@ -23,7 +23,6 @@ M.default = {
   white = "#d1d1d1",
   yellow = "#3d2aff",
   yellow100 = "#685aff",
-  yellow300 = hsl(45, 100, 50),
   yellow500 = hsl(45, 100, 35),
   yellow700 = hsl(45, 100, 20),
   yellow900 = hsl(46, 100, 10),
@@ -31,9 +30,8 @@ M.default = {
   red = "#a52aff",
   red100 = "#ba5aff",
   red300 = hsl(1, 90, 64),
+  -- I do actually like red 500 and could probably use it successfully for errors
   red500 = hsl(1, 71, 52),
-  red700 = hsl(1, 71, 42),
-  red900 = hsl(1, 71, 20),
   magenta = "#2883ff",
   magenta100 = "#5ea2ff",
   magenta500 = hsl(331, 64, 52),
@@ -99,7 +97,7 @@ function M.setup(opts)
   -- colors.fg_float = config.options.styles.floats == "dark" and colors.base01 or colors.fg
   colors.fg_float = colors.fg
 
-  colors.error = "#d35454"
+  colors.error = hsl(1, 71, 52)
   colors.warning = "#d38454"
   colors.info = "#ffae44"
   colors.hint = colors.cyan100

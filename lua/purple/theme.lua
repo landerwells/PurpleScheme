@@ -49,7 +49,7 @@ function M.setup()
     FoldColumn = { fg = c.base0 }, -- 'foldcolumn'
     SignColumn = { fg = c.base0 }, -- column where |signs| are displayed
     SignColumnSB = { fg = c.base0 }, -- column where |signs| are displayed
-    Substitute = { fg = c.base04, bg = c.red100 }, -- |:substitute| replacement text highlighting
+    Substitute = { fg = c.base04, bg = c.red500 }, -- |:substitute| replacement text highlighting
     LineNr = { fg = "#7e7e7e", bg = options.transparent and c.none or c.bg }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     CursorLineNr = { fg = "#d1d1d1" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     MatchParen = { fg = c.red100, bg = c.red500, bold = true }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
@@ -82,7 +82,7 @@ function M.setup()
     StatusLineNC = { fg = c.base0, bg = c.base04 }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
     TabLine = { fg = c.base0, bg = c.base01, sp = c.base0 }, -- tab pages line, not active tab page label
     TabLineFill = { fg = c.base0, bg = c.base02 }, -- tab pages line, where there are no labels
-    TabLineSel = { fg = c.yellow500, bg = c.bg }, -- tab pages line, active tab page label
+    TabLineSel = { fg = c.gitOrange, bg = c.bg }, -- tab pages line, active tab page label
     Title = { fg = c.blue100, bold = true }, -- titles for output from ":set all", ":autocmd" etc.
     -- Visual = { bg = "#2f2f2f", reverse = true }, -- Visual mode selection
     Visual = { bg = "#2f2f2f"}, -- Visual mode selection
@@ -160,8 +160,8 @@ function M.setup()
     -- mkdLink = { fg = c.blue, underline = true },
 
     markdownHeadingDelimiter = { fg = c.blue100, bold = true },
-    markdownCode = { fg = c.yellow500, bg = c.green900 },
-    markdownCodeBlock = { fg = c.yellow500, bg = c.green900 },
+    markdownCode = { fg = c.gitOrange, bg = c.green900 },
+    markdownCodeBlock = { fg = c.gitOrange, bg = c.green900 },
     markdownH1 = { fg = c.magenta500, bold = true },
     markdownH2 = { fg = c.violet500, bold = true },
     markdownLinkText = { fg = c.base01, underline = true },
@@ -283,7 +283,7 @@ function M.setup()
     --- Functions
     ["@constructor"] = { fg = c.blue100 }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
     ["@variable.parameter"] = { fg = c.blue100 }, -- For parameters of a function.
-    ["@variable.parameter.builtin"] = { fg = c.yellow300 }, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
+    ["@variable.parameter.builtin"] = { fg = c.yellow100 }, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
 
     --- Keywords
     ["@keyword"] = { fg = "#ff5eed", style = options.styles.keywords }, -- For keywords that don't fall in previous categories.
@@ -303,10 +303,10 @@ function M.setup()
 
     --- Text
     -- ["@markup.raw.markdown"] = { fg = c.blue },
-    ["@markup.raw.markdown_inline"] = { fg = c.yellow500, bg = c.green900 },
+    ["@markup.raw.markdown_inline"] = { fg = c.gitOrange, bg = c.green900 },
     ["@markup.link"] = { fg = c.base01, underline = true },
 
-    ["@markup.list.unchecked"] = { fg = c.yellow500 }, -- For brackets and parens.
+    ["@markup.list.unchecked"] = { fg = c.gitOrange }, -- For brackets and parens.
     ["@markup.list.checked"] = { fg = c.green500 }, -- For brackets and parens.
 
     ["@diff.plus"] = { link = "DiffAdd" },
@@ -318,12 +318,12 @@ function M.setup()
     -- tsx
     ["@constructor.tsx"] = { fg = c.base01 },
     ["@tag.delimiter.tsx"] = { fg = c.blue100 },
-    ["@tag.tsx"] = { fg = c.yellow500 },
+    ["@tag.tsx"] = { fg = c.gitOrange },
     ["@keyword.return.tsx"] = { fg = c.green500, style = "italic" },
     ["@keyword.tsx"] = { fg = c.green500, style = "italic" },
 
     -- typescript
-    ["@variable.typescript"] = { fg = c.yellow500 },
+    ["@variable.typescript"] = { fg = c.gitOrange },
 
     -- Vue
     ["@tag.delimiter.vue"] = { fg = c.blue100 },
@@ -335,8 +335,8 @@ function M.setup()
     ["@keyword.javascript"] = { fg = c.green500, style = "italic" },
     ["@keyword.return.javascript"] = { fg = c.green500, style = "italic" },
     ["@tag.delimiter.javascript"] = { fg = c.blue100 },
-    ["@tag.javascript"] = { fg = c.yellow500 },
-    ["@variable.javascript"] = { fg = c.yellow500 },
+    ["@tag.javascript"] = { fg = c.gitOrange },
+    ["@variable.javascript"] = { fg = c.gitOrange },
 
     -- LSP Semantic Token Groups
     ["@lsp.type.boolean"] = { link = "@boolean" },
@@ -386,7 +386,7 @@ function M.setup()
     -- ts-rainbow
     rainbowcol1 = { fg = c.red500 },
     rainbowcol2 = { fg = c.blue100 },
-    rainbowcol3 = { fg = c.yellow500 },
+    rainbowcol3 = { fg = c.gitOrange },
     rainbowcol4 = { fg = c.green500 },
     rainbowcol5 = { fg = c.cyan100 },
     rainbowcol6 = { fg = c.base01 },
@@ -425,7 +425,7 @@ function M.setup()
     -- diff
     diffAdded = { fg = c.green500 },
     diffRemoved = { fg = c.red500 },
-    diffChanged = { fg = c.yellow500 },
+    diffChanged = { fg = c.gitOrange },
     diffOldFile = { fg = c.violet500 },
     diffNewFile = { fg = c.blue100 },
     diffFile = { fg = c.base01 },
@@ -438,17 +438,17 @@ function M.setup()
     NeogitHunkHeader = { fg = c.base0, bg = c.base02 },
     NeogitHunkHeaderHighlight = { fg = c.base01, bg = c.base02 },
     NeogitDiffContextHighlight = { fg = c.base00, bg = c.base02 },
-    NeogitDiffDeleteHighlight = { fg = c.red500, bg = c.red900 },
+    NeogitDiffDeleteHighlight = { fg = c.red500, bg = c.gitRed },
     NeogitDiffAddHighlight = { fg = c.green500, bg = c.green900 },
 
     -- Neotest
     NeotestPassed = { fg = c.green500 },
-    NeotestRunning = { fg = c.yellow500 },
+    NeotestRunning = { fg = c.gitOrange },
     NeotestFailed = { fg = c.red500 },
     NeotestSkipped = { fg = c.base01 },
     NeotestTest = { fg = c.base00 },
     NeotestNamespace = { fg = c.cyan100 },
-    NeotestFocused = { fg = c.yellow500 },
+    NeotestFocused = { fg = c.gitOrange },
     NeotestFile = { fg = c.cyan100 },
     NeotestDir = { fg = c.base01 },
     NeotestBorder = { fg = c.base01 },
@@ -462,16 +462,16 @@ function M.setup()
 
     -- GitGutter
     GitGutterAdd = { fg = c.green500 }, -- diff mode: Added line |diff.txt|
-    GitGutterChange = { fg = c.yellow500 }, -- diff mode: Changed line |diff.txt|
+    GitGutterChange = { fg = c.gitOrange }, -- diff mode: Changed line |diff.txt|
     GitGutterDelete = { fg = c.red500 }, -- diff mode: Deleted line |diff.txt|
     GitGutterAddLineNr = { fg = c.green500 },
-    GitGutterChangeLineNr = { fg = c.yellow500 },
+    GitGutterChangeLineNr = { fg = c.gitOrange },
     GitGutterDeleteLineNr = { fg = c.red500 },
 
     -- GitSigns
-    GitSignsAdd = { fg = "#5aff5d" }, -- diff mode: Added line |diff.txt|
-    GitSignsChange = { fg = "#ffae44" }, -- diff mode: Changed line |diff.txt|
-    GitSignsDelete = { fg = "#ff4444" }, -- diff mode: Deleted line |diff.txt|
+    GitSignsAdd = { fg = c.gitGreen }, -- diff mode: Added line |diff.txt|
+    GitSignsChange = { fg = c.gitOrange }, -- diff mode: Changed line |diff.txt|
+    GitSignsDelete = { fg = c.gitRed }, -- diff mode: Deleted line |diff.txt|
 
     -- Telescope
     TelescopeBorder = { fg = c.base01, bg = c.bg_float },
@@ -485,8 +485,8 @@ function M.setup()
     },
     NvimTreeNormalNC = { fg = c.base00, bg = c.bg_sidebar },
     NvimTreeRootFolder = { fg = c.blue, bold = true },
-    NvimTreeGitDirty = { fg = c.yellow500 },
-    NvimTreeGitNew = { fg = c.green500 },
+    NvimTreeGitDirty = { fg = c.gitOrange },
+    NvimTreeGitNew = { fg = c.gitGreen },
     NvimTreeGitDeleted = { fg = c.red500 },
     NvimTreeOpenedFile = { bg = c.bg_highlight },
     NvimTreeSpecialFile = { fg = c.violet500, underline = true },
@@ -564,7 +564,7 @@ function M.setup()
     healthWarning = { fg = c.warning },
 
     -- BufferLine
-    BufferLineIndicatorSelected = { fg = c.yellow500 },
+    BufferLineIndicatorSelected = { fg = c.gitOrange },
 
     -- Barbar
     BufferCurrent = { bg = c.bg, fg = c.fg },
@@ -813,8 +813,8 @@ function M.setup()
     MiniDiffOverChange = { link = "DiffText" },
     MiniDiffOverContext = { link = "DiffChange" },
     MiniDiffOverDelete = { link = "DiffDelete" },
-    MiniDiffSignAdd = { fg = c.green500 },
-    MiniDiffSignChange = { fg = c.yellow500 },
+    MiniDiffSignAdd = { fg = c.gitGreen },
+    MiniDiffSignChange = { fg = c.gitOrange },
     MiniDiffSignDelete = { fg = c.red500 },
 
     MiniFilesBorder = { link = "FloatBorder" },
@@ -849,7 +849,7 @@ function M.setup()
     MiniJump2dDim = { fg = c.base01 },
     MiniJump2dSpot = { fg = c.magenta500, bold = true, nocombine = true },
     MiniJump2dSpotAhead = { fg = c.cyan100, bg = c.black, nocombine = true },
-    MiniJump2dSpotUnique = { fg = c.yellow500, bold = true, nocombine = true },
+    MiniJump2dSpotUnique = { fg = c.gitOrange, bold = true, nocombine = true },
 
     MiniMapNormal = { link = "NormalFloat" },
     MiniMapSymbolCount = { link = "Special" },
