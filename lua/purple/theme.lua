@@ -75,7 +75,7 @@ function M.setup()
     CurSearch = { link = "IncSearch" },
     SpecialKey = { fg = c.base01 }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
     SpellBad = { sp = c.red500, undercurl = true }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
-    SpellCap = { sp = c.violet100, undercurl = true }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
+    SpellCap = { sp = c.gitOrange, undercurl = true }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
     SpellLocal = { sp = c.cyan100, undercurl = true }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
     SpellRare = { sp = c.gitOrange, undercurl = true }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
     StatusLine = { fg = c.white, bg = c.base03 }, -- status line of current window
@@ -166,10 +166,11 @@ function M.setup()
     markdownH2 = { fg = c.violet500, bold = true },
     markdownLinkText = { fg = c.base01, underline = true },
 
-    ["helpCommand"] = { fg = c.base01, bg = c.blue900 },
+    -- Not super sure what this is
+    ["helpCommand"] = { fg = c.base01, bg = c.blue100 },
 
     debugPC = { bg = c.bg_sidebar }, -- used for highlighting the current line in terminal-debug
-    debugBreakpoint = { fg = c.blue300, bg = c.blue700 }, -- used for breakpoint colors in terminal-debug
+    debugBreakpoint = { fg = c.blue100, bg = c.blue100 }, -- used for breakpoint colors in terminal-debug
 
     dosIniLabel = { link = "@property" },
 
@@ -202,7 +203,7 @@ function M.setup()
 
     LspInfoBorder = { fg = c.base02, bg = c.bg_float },
 
-    DapStoppedLine = { bg = c.yellow700 }, -- Used for "Warning" diagnostic virtual text
+    DapStoppedLine = { bg = c.warning }, -- Used for "Warning" diagnostic virtual text
 
     -- These groups are for the Neovim tree-sitter highlights.
     ["@annotation"] = { link = "PreProc" },
@@ -831,7 +832,7 @@ function M.setup()
     MiniHipatternsNote = { fg = c.bg, bg = c.info, bold = true },
     MiniHipatternsTodo = { fg = c.bg, bg = c.hint, bold = true },
 
-    MiniIconsAzure = { fg = c.blue300 },
+    MiniIconsAzure = { fg = c.blue100 },
     MiniIconsBlue = { fg = c.blue },
     MiniIconsCyan = { fg = c.cyan },
     MiniIconsGreen = { fg = c.green },
