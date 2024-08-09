@@ -8,39 +8,37 @@ local M = {}
 M.default = {
   none = "NONE",
 
-  gitGreen = "#5aff5d",
-  gitOrange = "#ffae44",
-  gitRed = "#ff4444",
-  temp = "#ffd700",
-  temp2 = "#5effc3",
+  gitGreen   = "#5aff5d",
+  gitOrange  = "#ffae44",
+  gitRed     = "#ff4444",
+  temp       = "#ffd700",
+  temp2      = "#5effc3",
 
-  base04 = "#171717",
-  base03 = hsl(192, 100, 11),
-  base02 = hsl(192, 81, 14),
-  -- Comments
-  base01 = "#51545c",
-  base00 = hsl(196, 13, 45),
-  base0 = hsl(186, 8, 65),
-  white = "#d1d1d1",
-  yellow = "#3d2aff",
-  yellow100 = "#685aff",
-  pink = "#ff5eed",
-  red = "#a52aff",
-  red100 = "#ba5aff",
-  red500 = hsl(1, 71, 52),
-  magenta = "#2883ff",
+  base03     = "#171717",
+  base02     = "#302c2c",
+  base01     = "#51545c",
+  temp3      = "#7e7e7e",
+  white      = "#d1d1d1",
+  base00     = hsl(196, 13, 45),
+  base0      = hsl(186, 8, 65),
+
+  yellow     = "#3d2aff",
+  yellow100  = "#685aff",
+  pink       = "#ff5eed",
+  red        = "#a52aff",
+  red100     = "#ba5aff",
+  magenta    = "#2883ff",
   magenta100 = "#5ea2ff",
-  violet = hsl(237, 43, 60),
-  violet500 = hsl(237, 43, 60),
-  violet700 = hsl(237, 43, 50),
-  violet900 = hsl(237, 42, 25),
-  blue = "#2b4fff",
-  blue100 = "#5c78ff",
-  cyan = "#28b9ff",
-  cyan100 = "#5ac8ff",
-  green = "#7129ff",
-  green100 = "#905aff",
-  green900 = hsl(68, 100, 10),
+  blue       = "#2b4fff",
+  blue100    = "#5c78ff",
+  cyan       = "#28b9ff",
+  cyan100    = "#5ac8ff",
+  green      = "#7129ff",
+  green100   = "#905aff",
+  red500     = hsl(1, 71, 52),
+  violet     = hsl(237, 43, 60),
+  violet700  = hsl(237, 43, 50),
+  violet900  = hsl(237, 42, 25),
 
   bg = "#1d1d1d",
   bg_highlight = "#1d1d1d",
@@ -70,16 +68,16 @@ function M.setup(opts)
   colors.border = colors.black
 
   -- Popups and statusline always get a dark background
-  colors.bg_popup = colors.base04
+  colors.bg_popup = colors.base03
   colors.bg_statusline = "#1d1d1d"
 
   -- Sidebar and Floats are configurable
   colors.bg_sidebar = config.options.styles.sidebars == "transparent" and colors.none
-    or config.options.styles.sidebars == "dark" and colors.base04
+    or config.options.styles.sidebars == "dark" and colors.base03
     or colors.bg
 
   colors.bg_float = config.options.styles.floats == "transparent" and colors.none
-    or config.options.styles.floats == "dark" and colors.base04
+    or config.options.styles.floats == "dark" and colors.base03
     or colors.bg
 
   -- colors.fg_float = config.options.styles.floats == "dark" and colors.base01 or colors.fg
@@ -89,7 +87,7 @@ function M.setup(opts)
   colors.warning = "#d38454"
   colors.info = "#ffae44"
   colors.hint = colors.cyan100
-  colors.todo = colors.violet100
+  colors.todo = colors.white
 
   config.options.on_colors(colors)
   if opts.transform and config.is_day() then
