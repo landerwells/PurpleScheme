@@ -1,6 +1,6 @@
 local util = require("purple.util")
-local hslutil = require("purple.hsl")
-local hsl = hslutil.hslToHex
+-- local hslutil = require("purple.hsl")
+-- local hsl = hslutil.hslToHex
 
 local M = {}
 
@@ -11,20 +11,18 @@ M.default = {
   gitGreen   = "#5aff5d",
   gitOrange  = "#ffae44",
   gitRed     = "#ff4444",
-  temp       = "#ffd700",
-  temp2      = "#5effc3",
+  warning    = "#ffd700",
 
+  fg         = "#2f2f2f",
+  lgtbase00  = "#ffffff",
+  lgtbase01  = "#d1d1d1",
   base03     = "#171717",
   base02     = "#302c2c",
   base01     = "#51545c",
-  temp3      = "#7e7e7e",
-  white      = "#d1d1d1",
-  base00     = hsl(196, 13, 45),
-  base0      = hsl(186, 8, 65),
+  base00     = "#7e7e7e",
 
   yellow     = "#3d2aff",
   yellow100  = "#685aff",
-  pink       = "#ff5eed",
   red        = "#a52aff",
   red100     = "#ba5aff",
   magenta    = "#2883ff",
@@ -35,14 +33,12 @@ M.default = {
   cyan100    = "#5ac8ff",
   green      = "#7129ff",
   green100   = "#905aff",
-  red500     = hsl(1, 71, 52),
-  violet     = hsl(237, 43, 60),
-  violet700  = hsl(237, 43, 50),
-  violet900  = hsl(237, 42, 25),
+  temp2      = "#5effc3",
+  pink       = "#ff5eed",
+  red500     = "#dc312e",
 
   bg = "#1d1d1d",
   bg_highlight = "#1d1d1d",
-  fg = hsl(186, 8, 55),
 }
 
 ---@return ColorScheme
@@ -83,11 +79,11 @@ function M.setup(opts)
   -- colors.fg_float = config.options.styles.floats == "dark" and colors.base01 or colors.fg
   colors.fg_float = colors.fg
 
-  colors.error = hsl(1, 71, 52)
+  colors.error = colors.red500
   colors.warning = "#d38454"
-  colors.info = "#ffae44"
+  colors.info = colors.gitOrange
   colors.hint = colors.cyan100
-  colors.todo = colors.white
+  colors.todo = colors.lgtbase00
 
   config.options.on_colors(colors)
   if opts.transform and config.is_day() then
