@@ -44,6 +44,7 @@ function M.setup(opts)
   opts = opts or {}
   local config = require("purple.config")
 
+  
   local style = "default"
   local palette = M[style] or {}
   if type(palette) == "function" then
