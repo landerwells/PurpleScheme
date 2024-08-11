@@ -59,7 +59,7 @@ function M.setup()
     MoreMsg = { fg = c.base01 }, -- |more-prompt|
     NonText = { fg = c.base01, bold = true }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
     Normal = { fg = c.base01, bg = options.transparent and c.none or c.bg }, -- normal text
-    -- NormalNC = { fg = c.base00, bg = options.transparent and c.none or options.dim_inactive and c.base03 or c.bg }, -- normal text in non-current windows
+    NormalNC = { fg = c.base00, bg = options.transparent and c.none or options.dim_inactive and c.base03 or c.bg }, -- normal text in non-current windows
     NormalSB = { fg = c.base01, bg = c.bg_sidebar }, -- normal text in sidebar
     NormalFloat = { fg = c.base01, bg = c.bg_float }, -- Normal text in floating windows.
     FloatBorder = { fg = c.base01, bg = c.bg_float },
@@ -652,44 +652,44 @@ function M.setup()
     CmpDocumentationBorder = { fg = c.base02, bg = c.bg_float },
     CmpGhostText = { fg = c.base01 },
 
-    CmpItemAbbr = { fg = c.fg, bg = c.fg },
-    CmpItemAbbrDeprecated = { fg = c.base01, bg = c.fg, strikethrough = true },
-    CmpItemAbbrMatch = { fg = c.blue100, bg = c.fg },
-    CmpItemAbbrMatchFuzzy = { fg = c.blue100, bg = c.fg },
+    CmpItemAbbr = { fg = c.fg, bg = c.none },
+    CmpItemAbbrDeprecated = { fg = c.base01, bg = c.none, strikethrough = true },
+    CmpItemAbbrMatch = { fg = c.blue100, bg = c.none },
+    CmpItemAbbrMatchFuzzy = { fg = c.blue100, bg = c.none },
 
-    CmpItemMenu = { fg = c.base01, bg = c.fg },
+    CmpItemMenu = { fg = c.base01, bg = c.none },
 
-    CmpItemKindDefault = { fg = c.base01, bg = c.fg },
+    CmpItemKindDefault = { fg = c.base01, bg = c.none },
 
-    CmpItemKindCodeium = { fg = c.cyan100, bg = c.fg },
-    CmpItemKindCopilot = { fg = c.cyan100, bg = c.fg },
-    CmpItemKindTabNine = { fg = c.cyan100, bg = c.fg },
+    CmpItemKindCodeium = { fg = c.cyan100, bg = c.none },
+    CmpItemKindCopilot = { fg = c.cyan100, bg = c.none },
+    CmpItemKindTabNine = { fg = c.cyan100, bg = c.none },
 
-    CmpItemKindKeyword = { fg = c.cyan, bg = c.fg },
-    CmpItemKindVariable = { fg = c.magenta, bg = c.fg },
-    CmpItemKindConstant = { fg = c.magenta, bg = c.fg },
-    CmpItemKindReference = { fg = c.magenta, bg = c.fg },
-    CmpItemKindValue = { fg = c.magenta, bg = c.fg },
+    CmpItemKindKeyword = { fg = c.cyan, bg = c.none },
+    CmpItemKindVariable = { fg = c.magenta, bg = c.none },
+    CmpItemKindConstant = { fg = c.magenta, bg = c.none },
+    CmpItemKindReference = { fg = c.magenta, bg = c.none },
+    CmpItemKindValue = { fg = c.magenta, bg = c.none },
 
-    CmpItemKindFunction = { fg = c.blue, bg = c.fg },
-    CmpItemKindMethod = { fg = c.blue, bg = c.fg },
-    CmpItemKindConstructor = { fg = c.blue, bg = c.fg },
+    CmpItemKindFunction = { fg = c.blue, bg = c.none },
+    CmpItemKindMethod = { fg = c.blue, bg = c.none },
+    CmpItemKindConstructor = { fg = c.blue, bg = c.none },
 
-    CmpItemKindClass = { fg = c.pink, bg = c.fg },
-    CmpItemKindInterface = { fg = c.pink, bg = c.fg },
-    CmpItemKindStruct = { fg = c.pink, bg = c.fg },
-    CmpItemKindEvent = { fg = c.pink, bg = c.fg },
-    CmpItemKindEnum = { fg = c.pink, bg = c.fg },
-    CmpItemKindUnit = { fg = c.pink, bg = c.fg },
+    CmpItemKindClass = { fg = c.pink, bg = c.none },
+    CmpItemKindInterface = { fg = c.pink, bg = c.none },
+    CmpItemKindStruct = { fg = c.pink, bg = c.none },
+    CmpItemKindEvent = { fg = c.pink, bg = c.none },
+    CmpItemKindEnum = { fg = c.pink, bg = c.none },
+    CmpItemKindUnit = { fg = c.pink, bg = c.none },
 
-    CmpItemKindModule = { fg = c.yellow, bg = c.fg },
+    CmpItemKindModule = { fg = c.yellow, bg = c.none },
 
-    CmpItemKindProperty = { fg = c.cyan, bg = c.fg },
-    CmpItemKindField = { fg = c.cyan, bg = c.fg },
-    CmpItemKindTypeParameter = { fg = c.cyan, bg = c.fg },
-    CmpItemKindEnumMember = { fg = c.cyan, bg = c.fg },
-    CmpItemKindOperator = { fg = c.cyan, bg = c.fg },
-    CmpItemKindSnippet = { fg = c.blue100, bg = c.fg },
+    CmpItemKindProperty = { fg = c.cyan, bg = c.none },
+    CmpItemKindField = { fg = c.cyan, bg = c.none },
+    CmpItemKindTypeParameter = { fg = c.cyan, bg = c.none },
+    CmpItemKindEnumMember = { fg = c.cyan, bg = c.none },
+    CmpItemKindOperator = { fg = c.cyan, bg = c.none },
+    CmpItemKindSnippet = { fg = c.blue100, bg = c.none },
 
     -- navic
     NavicIconsFile = { fg = c.fg, bg = c.bg_statusline },
