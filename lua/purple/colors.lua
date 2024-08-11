@@ -1,6 +1,4 @@
 local util = require("purple.util")
--- local hslutil = require("purple.hsl")
--- local hsl = hslutil.hslToHex
 
 local M = {}
 

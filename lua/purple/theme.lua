@@ -27,7 +27,7 @@ function M.setup()
   theme.highlights = {
     Comment = { fg = "#51545c", style = options.styles.comments }, -- any comment
     ColorColumn = { bg = "#171717" }, -- used for the columns set with 'colorcolumn'
-    -- Conceal = { fg = c.base01 }, -- placeholder characters substituted for concealed text (see 'conceallevel')
+    Conceal = { fg = c.base01 }, -- placeholder characters substituted for concealed text (see 'conceallevel')
     Cursor = { fg = c.lgtbase00, bg = "#1d1d1d" }, -- character under the cursor
     lCursor = { fg = c.base03, bg = c.base00 }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
     CursorIM = { fg = c.base03, bg = c.base00}, -- like Cursor, but used when in IME mode |CursorIM|
@@ -70,7 +70,7 @@ function M.setup()
     PmenuThumb = { fg = c.base01, reverse = true }, -- Popup menu: Thumb of the scrollbar.
     Question = { fg = c.cyan100, bold = true }, -- |hit-enter| prompt and yes/no questions
     QuickFixLine = { bg = c.blue100, bold = true }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-    Search = { fg = "#2f2f2f", reverse = true }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+    Search = { fg = "#2f2f2f" }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
     IncSearch = { fg = "#4f4f4f", standout = true }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     CurSearch = { link = "IncSearch" },
     SpecialKey = { fg = c.base01 }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
