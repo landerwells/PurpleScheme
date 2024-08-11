@@ -648,13 +648,13 @@ function M.setup()
     LightspeedUnlabeledMatch = { fg = c.blue100, bold = true },
 
     -- Cmp
-    CmpDocumentation = { fg = c.fg, bg = c.bg_float },
+    CmpDocumentation = { fg = "#cccccc", bg = c.fg },
     CmpDocumentationBorder = { fg = c.base02, bg = c.bg_float },
     CmpGhostText = { fg = c.base01 },
 
     CmpItemAbbr = { fg = c.fg, bg = c.none },
     CmpItemAbbrDeprecated = { fg = c.base01, bg = c.none, strikethrough = true },
-    CmpItemAbbrMatch = { fg = c.blue100, bg = c.none },
+    CmpItemAbbrMatch = { fg = "#ffffff", bg = c.none },
     CmpItemAbbrMatchFuzzy = { fg = c.blue100, bg = c.none },
 
     CmpItemMenu = { fg = c.base01, bg = c.none },
