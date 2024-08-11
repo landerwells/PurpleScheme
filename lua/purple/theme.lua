@@ -49,7 +49,7 @@ function M.setup()
     FoldColumn = { fg = c.base00}, -- 'foldcolumn'
     SignColumn = { fg = c.base00}, -- column where |signs| are displayed
     SignColumnSB = { fg = c.base00}, -- column where |signs| are displayed
-    Substitute = { fg = c.red500, bg = "#4f4f4f" }, -- |:substitute| replacement text highlighting
+    Substitute = { bg = "#3f3f3f" }, -- |:substitute| replacement text highlighting
     LineNr = { fg = "#7e7e7e", bg = options.transparent and c.none or c.bg }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     CursorLineNr = { fg = "#d1d1d1" }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     MatchParen = { fg = c.red100, bg = c.red500, bold = true }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
@@ -758,7 +758,7 @@ function M.setup()
     -- Notify
     NotifyBackground = { fg = c.fg, bg = c.bg },
     --- Border
-    -- NotifyERRORBorder = { fg = util.darken(c.error, 0.3), bg = options.transparent and c.none or c.bg },
+    --- 
     -- NotifyWARNBorder = { fg = util.darken(c.warning, 0.3), bg = options.transparent and c.none or c.bg },
     -- NotifyINFOBorder = { fg = util.darken(c.info, 0.3), bg = options.transparent and c.none or c.bg },
     -- NotifyDEBUGBorder = { fg = util.darken(c.base01, 0.3), bg = options.transparent and c.none or c.bg },
