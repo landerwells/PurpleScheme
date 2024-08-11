@@ -4,7 +4,7 @@ local M = {}
 
 M.bg = "#000000"
 M.fg = "#ffffff"
-M.day_brightness = 0.3
+-- M.day_brightness = 0.3
 
 ---@param c  string
 local function hexToRgb(c)
@@ -42,7 +42,7 @@ function M.invert_color(color)
     local hsl = hsluv.hex_to_hsluv(color)
     hsl[3] = 100 - hsl[3]
     if hsl[3] < 40 then
-      hsl[3] = hsl[3] + (100 - hsl[3]) * M.day_brightness
+      hsl[3] = hsl[3] + (100 - hsl[3])
     end
     return hsluv.hsluv_to_hex(hsl)
   end

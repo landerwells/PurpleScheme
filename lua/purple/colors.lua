@@ -44,7 +44,6 @@ function M.setup(opts)
   opts = opts or {}
   local config = require("purple.config")
 
-  -- local style = config.is_day() and config.options.light_style or config.options.style
   local style = "default"
   local palette = M[style] or {}
   if type(palette) == "function" then
@@ -84,9 +83,6 @@ function M.setup(opts)
   colors.todo = colors.lgtbase00
 
   config.options.on_colors(colors)
-  -- if opts.transform and config.is_day() then
-  --   util.invert_colors(colors)
-  -- end
 
   return colors
 end
