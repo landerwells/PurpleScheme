@@ -28,26 +28,26 @@ function M.blend(foreground, background, alpha)
   return string.format("#%02x%02x%02x", blendChannel(1), blendChannel(2), blendChannel(3))
 end
 
--- function M.darken(hex, amount, bg)
---   return M.blend(hex, bg or M.bg, amount)
--- end
+function M.darken(hex, amount, bg)
+  return M.blend(hex, bg or M.bg, amount)
+end
+--
+function M.lighten(hex, amount, fg)
+  return M.blend(hex, fg or M.fg, amount)
+end
 
--- function M.lighten(hex, amount, fg)
---   return M.blend(hex, fg or M.fg, amount)
--- end
-
--- function M.invert_color(color)
---   local hsluv = require("purple.hsluv")
---   if color ~= "NONE" then
---     local hsl = hsluv.hex_to_hsluv(color)
---     hsl[3] = 100 - hsl[3]
---     if hsl[3] < 40 then
---       hsl[3] = hsl[3] + (100 - hsl[3]) * M.day_brightness
---     end
---     return hsluv.hsluv_to_hex(hsl)
---   end
---   return color
--- end
+function M.invert_color(color)
+  local hsluv = require("purple.hsluv")
+  if color ~= "NONE" then
+    local hsl = hsluv.hex_to_hsluv(color)
+    hsl[3] = 100 - hsl[3]
+    if hsl[3] < 40 then
+      hsl[3] = hsl[3] + (100 - hsl[3]) * M.day_brightness
+    end
+    return hsluv.hsluv_to_hex(hsl)
+  end
+  return color
+end
 
 ---@param group string
 function M.highlight(group, hl)
