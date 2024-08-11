@@ -682,14 +682,14 @@ function M.setup()
     CmpItemKindEnum = { fg = c.pink, bg = c.fg },
     CmpItemKindUnit = { fg = c.pink, bg = c.fg },
 
-    CmpItemKindModule = { fg = c.yellow, bg = c.none },
+    CmpItemKindModule = { fg = c.yellow, bg = c.fg },
 
-    CmpItemKindProperty = { fg = c.cyan, bg = c.none },
-    CmpItemKindField = { fg = c.cyan, bg = c.none },
-    CmpItemKindTypeParameter = { fg = c.cyan, bg = c.none },
-    CmpItemKindEnumMember = { fg = c.cyan, bg = c.none },
-    CmpItemKindOperator = { fg = c.cyan, bg = c.none },
-    CmpItemKindSnippet = { fg = c.blue100, bg = c.none },
+    CmpItemKindProperty = { fg = c.cyan, bg = c.fg },
+    CmpItemKindField = { fg = c.cyan, bg = c.fg },
+    CmpItemKindTypeParameter = { fg = c.cyan, bg = c.fg },
+    CmpItemKindEnumMember = { fg = c.cyan, bg = c.fg },
+    CmpItemKindOperator = { fg = c.cyan, bg = c.fg },
+    CmpItemKindSnippet = { fg = c.blue100, bg = c.fg },
 
     -- navic
     NavicIconsFile = { fg = c.fg, bg = c.bg_statusline },
