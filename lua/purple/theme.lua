@@ -649,7 +649,7 @@ function M.setup()
 
     -- Cmp
     CmpDocumentation = { fg = "#cccccc", bg = c.fg },
-    CmpDocumentationBorder = { fg = c.base02, bg = c.bg_float },
+    CmpDocumentationBorder = { fg = c.base02, bg = c.fg },
     CmpGhostText = { fg = "#cccccc" },
 
     CmpItemAbbr = { fg = "#cccccc", bg = c.none },
