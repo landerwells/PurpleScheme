@@ -84,9 +84,9 @@ function M.setup(opts)
   colors.todo = colors.lgtbase00
 
   config.options.on_colors(colors)
-  if opts.transform and config.is_day() then
-    util.invert_colors(colors)
-  end
+  -- if opts.transform and config.is_day() then
+  --   util.invert_colors(colors)
+  -- end
 
   return colors
 end
