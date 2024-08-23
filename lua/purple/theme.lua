@@ -153,10 +153,10 @@ function M.setup()
     htmlH2 = { fg = c.base01, bold = true },
 
     mkdHeading = { fg = c.pink, bold = true },
-    mkdCode = { bg = c.base01 },
-    mkdCodeDelimiter = { fg = c.base01, bg = c.green100 },
-    mkdCodeStart = { fg = c.blue100, bold = true },
-    mkdCodeEnd = { fg = c.blue100, bold = true },
+    mkdCode = { bg = c.lgtbase00 },
+    mkdCodeDelimiter = { fg = c.lgtbase00, bg = c.green100 },
+    mkdCodeStart = { fg = c.lgtbase00, bold = true },
+    mkdCodeEnd = { fg = c.lgtbase00, bold = true },
     mkdLink = { fg = c.blue, underline = true },
 
     markdownHeadingDelimiter = { fg = c.blue100, bold = true },
@@ -164,7 +164,7 @@ function M.setup()
     markdownCodeBlock = { fg = c.gitOrange, bg = c.base01 },
     markdownH1 = { fg = c.magenta100, bold = true },
     markdownH2 = { fg = c.blue100, bold = true },
-    markdownLinkText = { fg = c.base01, underline = true },
+    markdownLinkText = { fg = c.cyan100, underline = true },
 
     -- Not super sure what this is
     ["helpCommand"] = { fg = c.base01, bg = c.blue100 },
