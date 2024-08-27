@@ -16,6 +16,7 @@ M.default = {
   lgtbase01  = "#d1d1d1",
   base03     = "#171717",
   base02     = "#302c2c",
+  -- comments
   base01     = "#51545c",
   base00     = "#7e7e7e",
 

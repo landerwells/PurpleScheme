@@ -273,7 +273,7 @@ function M.setup()
     ["@punctuation.bracket"] = { fg = c.blue100 }, -- For brackets and parens.
     ["@punctuation.special"] = { fg = c.blue100 }, -- For special punctutation that does not fall in the catagories before.
     ["@punctuation.special.markdown"] = { fg = c.blue100, bold = true },
-    ["@markup.list"] = { fg = c.base01 }, -- For special punctutation that does not fall in the catagories before.
+    ["@markup.list"] = { fg = c.lgtbase00 }, -- For special punctutation that does not fall in the catagories before.
     ["@markup.list.markdown"] = { fg = c.blue100, bold = true },
 
     --- Literals
@@ -350,7 +350,7 @@ function M.setup()
     ["@lsp.type.escapeSequence"] = { link = "@string.escape" },
     ["@lsp.type.formatSpecifier"] = { link = "@markup.list" },
     ["@lsp.type.generic"] = { link = "@variable" },
-    ["@lsp.type.interface"] = { fg = c.base01 },
+    ["@lsp.type.interface"] = { fg = c.red },
     ["@lsp.type.keyword"] = { link = "@keyword" },
     ["@lsp.type.lifetime"] = { link = "@keyword.storage" },
     ["@lsp.type.namespace"] = { link = "@module" },
