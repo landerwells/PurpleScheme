@@ -1,4 +1,3 @@
-local util = require("purple.util")
 local colors = require("purple.colors")
 
 local M = {}
@@ -197,7 +196,7 @@ function M.setup()
     DiagnosticUnderlineInfo = { undercurl = true, sp = c.info }, -- Used to underline "Information" diagnostics
     DiagnosticUnderlineHint = { undercurl = true, sp = c.hint }, -- Used to underline "Hint" diagnostics
 
-    LspSignatureActiveParameter = { bg = c.base03, bold = true },
+    LspSignatureActiveParameter = { bg = c.base01, bold = true },
     LspCodeLens = { fg = c.base01 },
     LspInlayHint = { bg = c.base01, fg = c.blue100 },
 
@@ -549,7 +548,7 @@ function M.setup()
     LspSagaRenameBorder = { fg = c.green },
     LspSagaDefPreviewBorder = { fg = c.green },
     LspSagaCodeActionBorder = { fg = c.blue },
-    LspSagaFinderSelection = { fg = c.base03 },
+    LspSagaFinderSelection = { fg = c.base01 },
     LspSagaCodeActionTitle = { fg = c.cyan },
     LspSagaCodeActionContent = { fg = c.blue100 },
     LspSagaSignatureHelpBorder = { fg = c.red },
