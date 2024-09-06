@@ -25,7 +25,7 @@ function M.setup()
 
   theme.highlights = {
     Comment = { fg = "#51545c", style = options.styles.comments }, -- any comment
-    ColorColumn = { bg = "#171717" }, -- used for the columns set with 'colorcolumn'
+    ColorColumn = { bg = c.base03 }, -- used for the columns set with 'colorcolumn'
     Conceal = { fg = c.base01 }, -- placeholder characters substituted for concealed text (see 'conceallevel')
     Cursor = { fg = c.lgtbase00, bg = "#1d1d1d" }, -- character under the cursor
     lCursor = { fg = c.base03, bg = c.base00 }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
@@ -63,7 +63,7 @@ function M.setup()
     NormalFloat = { fg = c.lgtbase01, bg = c.bg_float }, -- Normal text in floating windows.
     FloatBorder = { fg = c.base01, bg = c.bg_float },
     FloatTitle = { fg = c.lgtbase01, bg = c.bg_float },
-    Pmenu = { fg = c.base01, bg = "#302c2c" }, -- Popup menu: normal item.
+    Pmenu = { fg = c.base01, bg = c.base02 }, -- Popup menu: normal item.
     PmenuSel = { fg = c.base01, bg = c.lgtbase01, reverse = true }, -- Popup menu: selected item.
     PmenuSbar = { fg = c.base03, reverse = true }, -- Popup menu: scrollbar.
     PmenuThumb = { fg = c.base01, reverse = true }, -- Popup menu: Thumb of the scrollbar.
@@ -200,7 +200,7 @@ function M.setup()
     LspCodeLens = { fg = c.base01 },
     LspInlayHint = { bg = c.base01, fg = c.blue100 },
 
-    LspInfoBorder = { fg = c.base02, bg = c.bg_float },
+    LspInfoBorder = { fg = c.base02, bg = c.base02 },
 
     DapStoppedLine = { bg = c.warning }, -- Used for "Warning" diagnostic virtual text
 
