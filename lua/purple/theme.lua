@@ -233,6 +233,7 @@ function M.setup()
     ["@none"] = {},
     ["@number"] = { link = "Number" },
     ["@keyword.directive"] = { link = "PreProc" },
+    ["@keyword.directive.bash"] = { link = "Comment" },
     ["@keyword.repeat"] = { link = "Repeat" },
     ["@keyword.storage"] = { link = "StorageClass" },
     ["@string"] = { link = "String" },
