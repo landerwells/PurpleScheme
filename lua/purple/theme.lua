@@ -65,8 +65,8 @@ function M.setup()
     FloatTitle = { fg = c.lgtbase01, bg = c.bg_float },
     Pmenu = { fg = c.base01, bg = c.base02 }, -- Popup menu: normal item.
     PmenuSel = { fg = c.base01, bg = c.lgtbase01, reverse = true }, -- Popup menu: selected item.
-    PmenuSbar = { fg = c.base03, reverse = true }, -- Popup menu: scrollbar.
-    PmenuThumb = { fg = c.base01, reverse = true }, -- Popup menu: Thumb of the scrollbar.
+    PmenuSbar = { fg = c.base01, reverse = true }, -- Popup menu: scrollbar.
+    PmenuThumb = { fg = c.base03, reverse = true }, -- Popup menu: Thumb of the scrollbar.
     Question = { fg = c.cyan100, bold = true }, -- |hit-enter| prompt and yes/no questions
     QuickFixLine = { bg = c.blue100, bold = true }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
     Search = { bg = "#3f3f3f" }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
@@ -233,6 +233,7 @@ function M.setup()
     ["@none"] = {},
     ["@number"] = { link = "Number" },
     ["@keyword.directive"] = { link = "PreProc" },
+    ["@keyword.directive.bash"] = { link = "Comment" },
     ["@keyword.repeat"] = { link = "Repeat" },
     ["@keyword.storage"] = { link = "StorageClass" },
     ["@string"] = { link = "String" },
@@ -494,7 +495,7 @@ function M.setup()
     NvimTreeImageFile = { fg = c.base00 },
     NvimTreeSymlink = { fg = c.blue },
     NvimTreeFolderIcon = { bg = c.none, fg = c.blue },
-    -- NvimTreeFolderName= { fg = c.fg_float },
+    -- NvimTreeFolderName= { fg = c.foreground_float },
 
     NeoTreeNormal = { fg = c.base00, bg = c.bg_sidebar },
     NeoTreeNormalNC = { fg = c.base00, bg = c.bg_sidebar },
@@ -509,7 +510,7 @@ function M.setup()
     GlyphPalette3 = { fg = c.yellow },
     GlyphPalette4 = { fg = c.blue },
     GlyphPalette6 = { fg = c.cyan },
-    GlyphPalette7 = { fg = c.fg },
+    GlyphPalette7 = { fg = c.foreground },
     GlyphPalette9 = { fg = c.red },
 
     -- Dashboard
@@ -567,7 +568,7 @@ function M.setup()
     BufferLineIndicatorSelected = { fg = c.gitOrange },
 
     -- Barbar
-    BufferCurrent = { bg = c.bg, fg = c.fg },
+    BufferCurrent = { bg = c.bg, fg = c.foreground },
     BufferCurrentERROR = { bg = c.bg, fg = c.error },
     BufferCurrentHINT = { bg = c.bg, fg = c.hint },
     -- BufferCurrentIcon = { bg = c.bg, fg = c.},
@@ -577,7 +578,7 @@ function M.setup()
     BufferCurrentMod = { bg = c.bg, fg = c.warning },
     BufferCurrentSign = { bg = c.bg, fg = c.bg },
     BufferCurrentTarget = { bg = c.bg, fg = c.red },
-    BufferAlternate = { bg = c.base01, fg = c.fg },
+    BufferAlternate = { bg = c.base01, fg = c.foreground },
     BufferAlternateERROR = { bg = c.base01, fg = c.error },
     BufferAlternateHINT = { bg = c.base01, fg = c.hint },
     -- BufferAlternateIcon = { bg = c.base01, fg = c. },
@@ -587,7 +588,7 @@ function M.setup()
     BufferAlternateSign = { bg = c.base01, fg = c.info },
     BufferAlternateTarget = { bg = c.base01, fg = c.red },
     BufferAlternateWARN = { bg = c.base01, fg = c.warning },
-    BufferVisible = { bg = c.bg_statusline, fg = c.fg },
+    BufferVisible = { bg = c.bg_statusline, fg = c.foreground },
     BufferVisibleERROR = { bg = c.bg_statusline, fg = c.error },
     BufferVisibleHINT = { bg = c.bg_statusline, fg = c.hint },
     -- BufferVisibleIcon = { bg = c.bg_statusline, fg = c. },
@@ -624,7 +625,7 @@ function M.setup()
     TSNodeKey = { fg = c.magenta100, bold = true },
     TSNodeUnmatched = { fg = c.base01 },
 
-    LeapMatch = { bg = c.magenta100, fg = c.fg, bold = true },
+    LeapMatch = { bg = c.magenta100, fg = c.foreground, bold = true },
     LeapLabelPrimary = { fg = c.magenta100, bold = true },
     LeapLabelSecondary = { fg = c.cyan, bold = true },
     LeapBackdrop = { fg = c.base01 },
@@ -639,16 +640,16 @@ function M.setup()
     LightspeedLabelDistantOverlapped = { fg = c.cyan100, underline = true },
     LightspeedLabelOverlapped = { fg = c.magenta100, underline = true },
     LightspeedMaskedChar = { fg = c.pink },
-    LightspeedOneCharMatch = { bg = c.magenta100, fg = c.fg, bold = true },
-    LightspeedPendingOpArea = { bg = c.magenta100, fg = c.fg },
-    LightspeedShortcut = { bg = c.magenta100, fg = c.fg, bold = true, underline = true },
+    LightspeedOneCharMatch = { bg = c.magenta100, fg = c.foreground, bold = true },
+    LightspeedPendingOpArea = { bg = c.magenta100, fg = c.foreground },
+    LightspeedShortcut = { bg = c.magenta100, fg = c.foreground, bold = true, underline = true },
     -- LightspeedShortcutOverlapped = { link = "LightspeedShortcut" },
     -- LightspeedUniqueChar = { link = "LightspeedUnlabeledMatch" },
     LightspeedUnlabeledMatch = { fg = c.blue100, bold = true },
 
     -- Cmp
-    CmpDocumentation = { fg = "#cccccc", bg = c.fg },
-    CmpDocumentationBorder = { fg = c.base02, bg = c.fg },
+    CmpDocumentation = { fg = "#cccccc", bg = c.foreground },
+    CmpDocumentationBorder = { fg = c.base02, bg = c.foreground },
     CmpGhostText = { fg = "#cccccc" },
 
     CmpItemAbbr = { fg = "#cccccc", bg = c.none },
@@ -691,10 +692,10 @@ function M.setup()
     CmpItemKindSnippet = { fg = c.blue100, bg = c.none },
 
     -- navic
-    NavicIconsFile = { fg = c.fg, bg = c.bg_statusline },
+    NavicIconsFile = { fg = c.foreground, bg = c.bg_statusline },
     NavicIconsModule = { fg = c.yellow, bg = c.bg_statusline },
-    NavicIconsNamespace = { fg = c.fg, bg = c.bg_statusline },
-    NavicIconsPackage = { fg = c.fg, bg = c.bg_statusline },
+    NavicIconsNamespace = { fg = c.foreground, bg = c.bg_statusline },
+    NavicIconsPackage = { fg = c.foreground, bg = c.bg_statusline },
     NavicIconsClass = { fg = c.pink, bg = c.bg_statusline },
     NavicIconsMethod = { fg = c.blue, bg = c.bg_statusline },
     NavicIconsProperty = { fg = c.cyan, bg = c.bg_statusline },
@@ -716,10 +717,10 @@ function M.setup()
     NavicIconsEnumMember = { fg = c.cyan, bg = c.bg_statusline },
     NavicIconsStruct = { fg = c.pink, bg = c.bg_statusline },
     NavicIconsEvent = { fg = c.pink, bg = c.bg_statusline },
-    NavicIconsOperator = { fg = c.fg, bg = c.bg_statusline },
+    NavicIconsOperator = { fg = c.foreground, bg = c.bg_statusline },
     NavicIconsTypeParameter = { fg = c.cyan, bg = c.bg_statusline },
-    NavicText = { fg = c.fg, bg = c.bg_statusline },
-    NavicSeparator = { fg = c.fg, bg = c.bg_statusline },
+    NavicText = { fg = c.foreground, bg = c.bg_statusline },
+    NavicSeparator = { fg = c.foreground, bg = c.bg_statusline },
 
     IblIndent = { fg = c.base01, nocombine = true },
     IndentBlanklineChar = { fg = c.base01, nocombine = true },
@@ -755,7 +756,7 @@ function M.setup()
     LazyProgressTodo = { bold = true, fg = c.base01 },
 
     -- Notify
-    NotifyBackground = { fg = c.fg, bg = c.bg },
+    NotifyBackground = { fg = c.foreground, bg = c.bg },
     --- Border
     --- 
     -- NotifyWARNBorder = { fg = util.darken(c.warning, 0.3), bg = options.transparent and c.none or c.bg },
@@ -775,11 +776,11 @@ function M.setup()
     NotifyDEBUGTitle = { fg = c.base01 },
     NotifyTRACETitle = { fg = c.blue100 },
     --- Body
-    NotifyERRORBody = { fg = c.fg, bg = options.transparent and c.none or c.bg },
-    NotifyWARNBody = { fg = c.fg, bg = options.transparent and c.none or c.bg },
-    NotifyINFOBody = { fg = c.fg, bg = options.transparent and c.none or c.bg },
-    NotifyDEBUGBody = { fg = c.fg, bg = options.transparent and c.none or c.bg },
-    NotifyTRACEBody = { fg = c.fg, bg = options.transparent and c.none or c.bg },
+    NotifyERRORBody = { fg = c.foreground, bg = options.transparent and c.none or c.bg },
+    NotifyWARNBody = { fg = c.foreground, bg = options.transparent and c.none or c.bg },
+    NotifyINFOBody = { fg = c.foreground, bg = options.transparent and c.none or c.bg },
+    NotifyDEBUGBody = { fg = c.foreground, bg = options.transparent and c.none or c.bg },
+    NotifyTRACEBody = { fg = c.foreground, bg = options.transparent and c.none or c.bg },
 
     -- Mini
     MiniAnimateCursor = { reverse = true, nocombine = true },
@@ -821,7 +822,7 @@ function M.setup()
     MiniFilesBorderModified = { link = "DiagnosticFloatingWarn" },
     MiniFilesCursorLine = { link = "CursorLine" },
     MiniFilesDirectory = { link = "Directory" },
-    MiniFilesFile = { fg = c.fg },
+    MiniFilesFile = { fg = c.foreground },
     MiniFilesNormal = { link = "NormalFloat" },
     MiniFilesTitle = { link = "FloatTitle" },
     MiniFilesTitleFocused = { fg = c.hint, bg = c.bg_float },
@@ -880,7 +881,7 @@ function M.setup()
     MiniStarterFooter = { fg = c.yellow, italic = true },
     MiniStarterHeader = { fg = c.blue },
     MiniStarterInactive = { fg = c.base01, style = options.styles.comments },
-    MiniStarterItem = { fg = c.fg, bg = options.transparent and c.none or c.bg },
+    MiniStarterItem = { fg = c.foreground, bg = options.transparent and c.none or c.bg },
     MiniStarterItemBullet = { fg = c.base01 },
     MiniStarterItemPrefix = { fg = c.warning },
     MiniStarterSection = { fg = c.blue100 },
@@ -899,14 +900,14 @@ function M.setup()
 
     MiniSurround = { bg = c.pink, fg = c.black },
 
-    MiniTablineCurrent = { fg = c.fg, bg = c.base02, bold = true },
+    MiniTablineCurrent = { fg = c.foreground, bg = c.base02, bold = true },
     MiniTablineFill = { bg = c.black },
     MiniTablineHidden = { fg = c.blue100, bg = c.bg_statusline },
-    MiniTablineModifiedCurrent = { fg = c.base02, bg = c.fg, bold = true },
+    MiniTablineModifiedCurrent = { fg = c.base02, bg = c.foreground, bold = true },
     MiniTablineModifiedHidden = { fg = c.bg_statusline, bg = c.blue100 },
-    MiniTablineModifiedVisible = { fg = c.bg_statusline, bg = c.fg },
+    MiniTablineModifiedVisible = { fg = c.bg_statusline, bg = c.foreground },
     MiniTablineTabpagesection = { bg = c.bg_statusline, fg = c.none },
-    MiniTablineVisible = { fg = c.fg, bg = c.bg_statusline },
+    MiniTablineVisible = { fg = c.foreground, bg = c.bg_statusline },
 
     MiniTestEmphasis = { bold = true },
     MiniTestFail = { fg = c.red, bold = true },
