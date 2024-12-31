@@ -11,7 +11,7 @@ M.default = {
   gitRed     = "#ff4444",
   warning    = "#ffd700",
 
-  fg         = "#2f2f2f",
+  foreground         = "#2f2f2f",
   lgtbase00  = "#ffffff",
   lgtbase01  = "#d1d1d1",
   base03     = "#171717",
@@ -74,7 +74,7 @@ function M.setup(opts)
     or colors.bg
 
   -- colors.fg_float = config.options.styles.floats == "dark" and colors.base01 or colors.fg
-  colors.fg_float = colors.fg
+  colors.fg_float = colors.foreground
 
   colors.error = colors.red500
   colors.warning = "#d38454"
